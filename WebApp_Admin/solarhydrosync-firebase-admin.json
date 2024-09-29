@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "solarhydrosync",
+  "private_key_id": "63adb4b606a350e51d736eddf3afc99f1bdcba31",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcthT7poz4ewBL\nmETID87a0EPqzIKNfCabEilhlv8i7SOPGegJWxRJr075aaJj7rKQhzXEFRuijnmo\nFPHs1XeFUrJijROss0bISDydlJMpuoKXEjmuTxIBYLd5hOMMAKrIc6a7VXZn/HE2\nImrZ26Kfafd+XtY1qxtWM6CsVg+64BMMzalBApx9FpJZYU5Y3Za0QWGeWXfWyhal\nENRFHQO5zgNxTMtd1QyVp2jJsIpmAir4JSVFhMHuRVRRhlxtqQb225fYMJK4z2N0\nHWa/8r/3uVJ77FECCDNACjNv1aG7Tbbz2/EZS31n404u4AB8YMB7LgEbbFadk7xB\nlqPkDcgVAgMBAAECggEABd0/yfzENigyZjACv1nQ+gurxhPJ/RwVkjKnV/6qFmVk\nB0Jqsq7t1962rBI4x61ykS0aj76MPqLNXjTVHFUO3310Sh2YDDgsx7AeG66Z3d3j\nGLQlAN/2Yr+zyKBaMIDLOJ33wDA2+afdJnbIlUday+GzQ+vKYTJsNFkmroUp77/M\nuDKla3KYboA2upjPr6rAdqXBpoMPdIg7ORWaF3fYuC6gEIlU6z/TgITfCuy4mXtk\nD2kNPMQn/xXLzQtFhNSCMXDp2HSFtsRL8X+M93rizS8cllOwSZfvJvycic//2X8M\n4F0iWN8BB5fWLQEeVw9j1AQHB79VBP2Kz7+SXnMjoQKBgQDVqgV2d1wx0F79Z2S9\n4500I2t3aBvZROMjegi0ri49HTAQHZhHXGkZXnN/HIBVIqpFkK0CIyrU+vGAmH5j\nM6wp9hN78WBceTE6s1yBKUUh5VLFqQiOlZyNrbRxo7ruWF240fSDOqqjRc1k10dP\nCuSERS9g1oUZVT10E6MbsGIZFwKBgQC7wylRJHy4r+W1OF4H6wW62I91UX4KVqTR\ncRfAUxanniuEoGMg5P9VcPhjnsjYqdPuTDaD9Bctp++vy8c4CGnN//5TJxmE9bwf\n+5ZIOtWOYi74oa8D78i6MLN5rjeR07IuQeQtT/dRI9nVKnuUeZvx/ywlHhqEXs1x\nAqY0b5fLswKBgB2kTMW2oW+3vLXjFjLR1QlasJoMM3DdAbX2RCbs0zVfSz+xG2Mr\nCtmeJN/JkHQ/LugfviDByDtr5P02KrKQhJ39qY5UWk358j52i6rPkuu06NrLLIi7\ncNCm/JWXZWOTls0BM67RAMNN98S5qQbqN/Gxt3TzzdtJ3BCyeLpqqfFZAoGAVL5J\nyJiqPgUNrRQKxJIbnPAfF3k3ZN0kOG9No/0cTXzC8XIeK3uPjnWVdgj1Z2yG/Zei\nRz4EtBOGx5Y2jSCm+FXg6JDOIMd0KA86DdGYD1JbFtaKkkFIHFjcuD+cTxH36o7M\nuHLOEe4XY/Fvo1ybuMZNm1cR6sqK+MWUVDhFj6cCgYEAhSOcu65Cv4hudC+R8wH2\n6v7/9+26yWzw4t0Rh1tKKE12E5hby1rtt1n3VXeJe5nub3IigUrRsWBR02gKO8Cg\nKulF2oO4miR3FTbSG3Vc07TpK9cpsSjDA4bFNbISCuJ+KD3fGQEJN47kQEAFdTS9\nuaGfU0ExViiGQcKEr+CDfLc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-6qx2b@solarhydrosync.iam.gserviceaccount.com",
+  "client_id": "102464854860445463146",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6qx2b%40solarhydrosync.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
