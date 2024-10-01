@@ -1,3 +1,8 @@
+/*Google Fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -66,6 +71,12 @@ html, body {
     margin-bottom: 1rem;
 }
 
+h2{
+    font-family: "Agdasima", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 form .txt_field{
     position: relative;
     border-bottom: 2px solid #adadad;
@@ -88,7 +99,10 @@ form .txt_field{
     left: 5px;
     color: #adadad;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-family: "Agdasima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
     pointer-events: none;
 }
 
@@ -105,7 +119,9 @@ form .txt_field{
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
     top: -20px;
+    font-size: 16px;
     color: #2691d9;
+    transition: .5s;
 }
 
 .txt_field input:focus ~ span::before,
@@ -131,7 +147,7 @@ form button {
 
 form button:hover{
     background-color: #2691d9;
-    transition: .5s;
+    transition: .3s;
 }
 
 .forgot-password{
