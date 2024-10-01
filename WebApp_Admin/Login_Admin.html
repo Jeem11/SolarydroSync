@@ -13,11 +13,17 @@
             <img src="128logo.png" alt="Logo">
         </div>
         <h2>Login</h2>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
             <button type="submit">Sign In</button>
-            <a href="#" class="forgot-password">Forgot Password?</a>
+            <div class="forgot-password">Forgot Password?</div>
         </form>
     </div>
     

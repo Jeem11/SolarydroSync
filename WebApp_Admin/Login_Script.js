@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function(){
         }, 2000);
     }
     
-    setInterval(changeBackground, 4000);
+    setInterval(changeBackground, 2000);
     
     document.querySelector('.background-container').style.backgroundImage = images[0];
     
     //******************************************************************************************************* 
 
 
-    
+
 });
