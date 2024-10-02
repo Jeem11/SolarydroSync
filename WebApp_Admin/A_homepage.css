@@ -1,0 +1,72 @@
+/* General reset */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Tab Container */
+.tab-container {
+    width: 60%;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 15px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+    border-right: 1px solid #bbb; /* Divider between buttons */
+}
+
+.tab-link:last-child {
+    border-right: none; /* Remove last border */
+}
+
+.tab-link:hover {
+    background: #ccc;
+}
+
+.tab-link.active {
+    background: white;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50; /* Active tab indicator */
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+/* Tab Section */
+.tab-section {
+    display: none;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+.tab-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.tab-section p {
+    font-size: 16px;
+}
