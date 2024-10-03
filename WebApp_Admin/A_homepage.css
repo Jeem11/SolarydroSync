@@ -1,3 +1,11 @@
+:root{
+    /* Transition */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
 /* General reset */
 body, h1, h2, p, button {
     margin: 0;
@@ -7,43 +15,45 @@ body, h1, h2, p, button {
 
 /* Tab Container */
 .tab-container {
-    width: 60%;
-    margin: 50px auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust width as needed */
+    height: 500px; /* Set a fixed height */
+    margin: 120px auto; /* Center container vertically */
+    border: 1px solid #1D839F; /* Container border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    position: relative; /* Use relative positioning */
 }
+
 
 /* Tab Buttons */
 .tab-buttons {
-    display: flex;
-    background-color: #f1f1f1;
+    display: flex; /* Use flex to position buttons easily */
+    background-color: #1D839F; /* Match background to container's border color */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
 }
 
+/* Adjust Tab Links */
 .tab-link {
-    flex: 1;
-    padding: 15px;
-    background: #ddd;
+    padding: 10px 20px; /* Padding for button size */
+    background: #5590cf; /* Make button background match container */
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 16px;
-    border-right: 1px solid #bbb; /* Divider between buttons */
-}
-
-.tab-link:last-child {
-    border-right: none; /* Remove last border */
+    font-size: 14px;
+    color: white; /* Button text color */
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .tab-link:hover {
-    background: #ccc;
+    background: #4178b8; /* Slightly darker shade on hover */
 }
 
 .tab-link.active {
     background: white;
+    color: #195b8a; /* Match text color to active tab indicator */
     font-weight: bold;
-    border-bottom: 2px solid #4CAF50; /* Active tab indicator */
+    border-bottom: 2px solid #195b8a; /* Active tab indicator */
 }
 
 /* Tab Content */

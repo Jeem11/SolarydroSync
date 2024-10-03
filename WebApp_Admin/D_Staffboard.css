@@ -1,0 +1,97 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, html {
+    margin: 50px;
+    padding: 20px;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center everything horizontally */
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.title-container {
+    text-align: left; 
+    margin-bottom: 20px; /* Space between title and container */
+    width: 100%; 
+}
+
+.title {
+    font-size: 24px; 
+    color: #1D839F; 
+    font-weight: bold; 
+}
+
+.container {
+    display: flex;
+    border-radius: 15px;
+    width: 1200px; /* Set a fixed width for the container */
+    border: 2px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+
+.sidebar {
+    width: 25%; /* Increased width of the sidebar */
+    border-right: 2px solid #1D839F;
+    padding: 0; /* Removed padding to align buttons with container */
+    box-sizing: border-box;
+    /* Remove the background color from the sidebar */
+}
+
+.sidebar .tab-button {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    padding: 20px; 
+    margin: 15px 0; 
+    font-size: 18px; 
+    background-color: #1D839F; 
+    color: #fff;
+    border: 2px solid transparent; 
+    border-radius: 0; 
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; 
+    text-align: center; 
+}
+
+.sidebar .tab-button:hover {
+    background-color: #2ba0c1; 
+    color: black; 
+}
+
+.sidebar .tab-button.active {
+    background-color: #fff; 
+    color: #1D839F; 
+    border: 2px solid #1D839F; 
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    border-right: none;
+    font-weight: bold; 
+    font-size: 20px; 
+}
+
+.sidebar .tab-button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+
+.content {
+    width: 75%; 
+    padding: 30px; 
+    box-sizing: border-box;
+}
+
+.content-item {
+    display: none;
+}
+
+.content-item.active {
+    display: block;
+}
+
+
