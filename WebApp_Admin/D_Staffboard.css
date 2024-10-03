@@ -1,0 +1,104 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Title Container */
+.title-container {
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 50px;
+    text-align: left;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    color: #1D839F;
+    font-weight: bold;
+}
+
+/* Main Container Layout */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 72px); /* Full height minus title height */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%; /* 20% width for the sidebar */
+    padding: 30px 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align buttons to the left */
+    margin-left: 50px; /* Moves the sidebar a bit to the right */
+}
+
+/* Sidebar Buttons */
+.tab-button {
+    display: block;
+    width: calc(100% - 50px); /* Adjusted width to account for margin */
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    margin-left: 50px; /* Adds some space from the left edge */
+    background: #4178a9;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab-button:hover {
+    background: #4178b8;
+}
+
+.tab-button.active {
+    background: white;
+    color: #1D839F;
+    border: 3px solid #1D839F;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 30px; /* Moves the active button slightly more to the right */
+    transition: background 0.3s ease, color 0.4s ease;
+}
+
+/* Content Area */
+.content {
+    width: 80%; /* Take up the remaining space */
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #1D839F;
+    overflow-y: auto;
+    color: white;
+}
+
+/* Content Items */
+.content-item {
+    display: none; /* Hide all content by default */
+}
+
+.content-item.active {
+    display: block; /* Show active content */
+}
+
+.content-item h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.content-item p {
+    font-size: 18px;
+    line-height: 1.5;
+}

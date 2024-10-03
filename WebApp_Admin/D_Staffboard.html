@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Button-controlled content change">
+    <title>Staff Board</title>
+    <link rel="stylesheet" href="D_Staffboard.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <div class="title-container">
+        <h1 class="title">Staff Board</h1>
+    </div>
+
+    <!-- Sidebar and Content Wrapper -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <button class="tab-button active" data-target="content1">Head Admin</button>
+            <button class="tab-button" data-target="content2">Barangay Admin</button>
+            <button class="tab-button" data-target="content3">Cluster Leader</button>
+            <button class="tab-button" data-target="content4">Operators</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <div id="content1" class="content-item active">
+                <h2>Head Admin Content</h2>
+                <p>This is the content for Head Admin.</p>
+            </div>
+            <div id="content2" class="content-item">
+                <h2>Barangay Admin Content</h2>
+                <p>This is the content for Barangay Admin.</p>
+            </div>
+            <div id="content3" class="content-item">
+                <h2>Cluster Leader Content</h2>
+                <p>This is the content for Cluster Leader.</p>
+            </div>
+            <div id="content4" class="content-item">
+                <h2>Operators Content</h2>
+                <p>This is the content for Operators.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="D_Staffboard.js"></script>
+</body>
+</html>
