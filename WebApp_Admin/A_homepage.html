@@ -6,26 +6,34 @@
     <meta name="description" content="Tab-based Navigation">
     <meta name="keywords" content="HTML, CSS, Navigation, Tabs">
     <meta name="author" content="Your Name">
-    <title>Admin homepage</title>
+    <title>Admin Homepage</title>
     <link rel="stylesheet" href="A_homepage.css">
 </head>
 <body>
+    <!-- Title Section -->
+    <div class="title-container">
+        <h1 class="title">Home</h1>
+    </div>
+    
     <div class="main-container">
-        <div class="tab-buttons">
-            <button class="tab-link active" onclick="openTab('request')">Request</button>
-            <button class="tab-link" onclick="openTab('forecasting')">Forecasting</button>
-            <button class="tab-link" onclick="openTab('maintenance')">Maintenance</button>
+        <!-- Sidebar with Tab Buttons -->
+        <div class="sidebar">
+            <button class="tab-button active" data-target="request">Request</button>
+            <button class="tab-button" data-target="forecasting">Forecasting</button>
+            <button class="tab-button" data-target="maintenance">Maintenance</button>
         </div>
-        <div class="tab-content">
-            <div id="request" class="tab-section active">
+
+        <!-- Content Area -->
+        <div class="content">
+            <div id="request" class="content-item active">
                 <h2>Request Directory</h2>
                 <p>This is the content for the Request directory.</p>
             </div>
-            <div id="forecasting" class="tab-section">
+            <div id="forecasting" class="content-item">
                 <h2>Forecasting Directory</h2>
                 <p>This is the content for the Forecasting directory.</p>
             </div>
-            <div id="maintenance" class="tab-section">
+            <div id="maintenance" class="content-item">
                 <h2>Maintenance Directory</h2>
                 <p>This is the content for the Maintenance directory.</p>
             </div>

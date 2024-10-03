@@ -50,7 +50,6 @@ body, html {
     width: calc(100% - 50px); /* Adjusted width to account for margin */
     padding: 15px 25px;
     margin-bottom: 10px;
-    margin-left: 50px; /* Adds some space from the left edge */
     background: #4178a9;
     color: white;
     font-size: 16px;
