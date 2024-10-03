@@ -13,15 +13,15 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar close">
+     <!--Sidebar-->
+     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
                     <img src="tempLogo.png" alt="logo">
                 </span>
                 <div class="text header-text">
-                    <span class="address">Barangay 128</span>
+                    <span class="address"> Barangay 128 </span>
                 </div>
             </div>
             <br>
@@ -32,47 +32,51 @@
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-clipboard icon'></i>
-                        <span class="text nav-text">Request</span>
+                        <span class="text nav-text"> Request</span>
                     </a>
                 </li>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-alarm-exclamation icon'></i>
-                        <span class="text nav-text">Report</span>
+                        <span class="text nav-text"> Report</span>
                     </a>
                 </li>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-file icon'></i>
-                        <span class="text nav-text">Manual Authorization</span>
+                        <span class="text nav-text"> Manual Authorization</span>
                     </a>
                 </li>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-user-pin icon'></i>
-                        <span class="text nav-text">Staff Board</span>
+                        <span class="text nav-text"> Staff Board</span>
                     </a>
                 </li>
+                <ul class="menu-links"></ul>
                 <li class="nav-link">
                     <a href="#">
                         <i class='bx bx-home-alt icon'></i>
-                        <span class="text nav-text">Home</span>
+                        <span class="text nav-text"> Home</span>
                     </a>
                 </li>
             </div>
+
             <div class="bottom-content">
                 <li>
                     <a href="#">
                         <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text">Logout</span>
+                        <span class="text nav-text"> Logout</span>
                     </a>
                 </li>
+                
                 <li class="mode">
                     <div class="moon-sun">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
                     <span class="mode-text text">Dark Mode</span>
+
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
@@ -82,38 +86,62 @@
     </nav>
 
     <!-- Header -->
-    <header class="main-header">
-        <div class="logo-name">
-            <span class="header-title">SOLARHYDROSYNC</span>
-        </div>
-        <div class="user-info">
-            <i class='bx bx-user-circle'></i>
-            <span>A/HA Name...</span>
-            <div class="quick-access">
-                <i class='bx bx-dots-horizontal-rounded' id="dropdownToggle"></i>
-                <div class="dropdown-content" id="dropdownMenu">
+<header class="main-header">
+    <div class="logo-name">
+        <span class="header-title">SOLARHYDROSYNC</span>
+    </div>
+    <div class="user-info">
+        <i class='bx bx-user-circle'></i>
+        <span>A/HA Name...</span>
+        <div class="quick-access">
+            <i class='bx bx-dots-horizontal-rounded' id="dropdownToggle"></i>
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="drop-text">Account Settings</span>
+                </a>
+                <a href="#">
+                    <i class='bx bx-bell icon'></i>
+                    <span class="drop-text">Notifications</span>
+                </a>
+                <a href="#">
+                    <i class='bx bx-time icon'></i>
+                    <span class="drop-text">Activity Log</span>
+                </a>
+                <div class="logout">
                     <a href="#">
-                        <i class='bx bx-cog icon'></i>
-                        <span class="drop-text">Account Settings</span>
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="drop-text">Logout</span>
                     </a>
-                    <a href="#">
-                        <i class='bx bx-bell icon'></i>
-                        <span class="drop-text">Notifications</span>
-                    </a>
-                    <a href="#">
-                        <i class='bx bx-time icon'></i>
-                        <span class="drop-text">Activity Log</span>
-                    </a>
-                    <div class="logout">
-                        <a href="#">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="drop-text">Logout</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
+<!-- Footer Navigation Bar -->
+<footer class="bottom-nav">
+    <div class="footer-buttons">
+        <a href="#" class="footer-link">
+            <i class='bx bx-envelope icon'></i>
+            <span class="tooltiptext">Announcements</span>
+        </a>
+        <a href="#" class="footer-link">
+            <div class="icon-box">
+                <i class='bx bx-droplet icon'></i>
+                <span class="tooltiptext">Water Monitoring Distribution</span>
+            </div>
+        </a>
+        <a href="#" class="footer-link">
+            <i class='bx bx-archive icon'></i>
+            <span class="tooltiptext">Records</span>
+        </a>
+    </div>
+</footer>
+
+<!--Opaque Board-->
+<div class='board'></div>
+
 
     <!-- Tab Container -->
     <div class="tab-container">
