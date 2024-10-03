@@ -78,9 +78,9 @@ body, html {
     width: 80%; /* Take up the remaining space */
     padding: 30px;
     box-sizing: border-box;
-    background-color: #1D839F;
+    background-color: white;
     overflow-y: auto;
-    color: white;
+    color: black;
 }
 
 /* Content Items */
