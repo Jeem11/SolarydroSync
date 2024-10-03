@@ -53,24 +53,20 @@ footerLinks.forEach(link => {
 
     // Mouse over event
     link.addEventListener('mouseenter', () => {
-        // Clear any existing timeouts to ensure the tooltip can be shown again
         clearTimeout(timeout);
-
-        // Set a timeout to show the tooltip after 1 second
         timeout = setTimeout(() => {
             const tooltip = link.querySelector('.tooltiptext');
-            tooltip.style.visibility = 'visible'; // Set visibility to visible
-            tooltip.style.opacity = '1'; // Set opacity to 1
-        }, 1000); // Show after 1 second (1000 ms)
+            tooltip.style.visibility = 'visible'; 
+            tooltip.style.opacity = '1'; 
+        }, 1000); 
     });
 
     // Mouse leave event
     link.addEventListener('mouseleave', () => {
-        // Clear the timeout if mouse leaves before 1 second
         clearTimeout(timeout);
         
         const tooltip = link.querySelector('.tooltiptext');
-        tooltip.style.visibility = 'hidden'; // Set visibility to hidden
-        tooltip.style.opacity = '0'; // Reset opacity to 0
+        tooltip.style.visibility = 'hidden'; 
+        tooltip.style.opacity = '0'; 
     });
 });
