@@ -50,27 +50,21 @@ body, html {
     width: calc(100% - 50px); /* Adjusted width to account for margin */
     padding: 15px 25px;
     margin-bottom: 10px;
-    background: #4178a9;
-    color: white;
+    background: white;
+    color: #1D839F;
     font-size: 16px;
     text-align: left;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.tab-button:hover {
-    background: #4178b8;
+    transition: background 0.7s ease, color 0.7s ease;
 }
 
 .tab-button.active {
-    background: white;
+    background: #d4d6da;
     color: #1D839F;
-    border: 3px solid #1D839F;
     font-weight: bold;
     border-radius: 20px;
     margin-left: 20px; /* Moves the active button slightly more to the right */
-    transition: background 0.3s ease, color 0.4s ease;
 }
 
 /* Content Area */

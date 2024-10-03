@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Remove active class from all buttons and reset styles
             buttons.forEach(btn => {
                 btn.classList.remove('active');
-                btn.style.backgroundColor = '#1D839F'; // Original background color
-                btn.style.color = '#fff'; // Original text color
+                btn.style.backgroundColor = '#fff'; // Original background color
+                btn.style.color = '#1D839F'; // Original text color
                 btn.style.borderColor = 'transparent'; // Remove border color
             });
 
             // Add active class and styles to clicked button
             this.classList.add('active');
-            this.style.backgroundColor = '#fff'; // Change background to white
+            this.style.backgroundColor = '#d4d6da'; // Change background
             this.style.color = '#1D839F'; // Change text color to match the theme
             this.style.borderColor = '#1D839F'; // Set border color
 
