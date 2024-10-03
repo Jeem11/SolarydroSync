@@ -8,7 +8,7 @@ function openTab(tabName) {
     tabSections.forEach(section => section.classList.remove('active'));
 
     // Add 'active' class to the clicked button
-    document.querySelector(`.tab-link[onclick="openTab('${tabName}')"]`).classList.add('active');
+    document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
 
     // Show the corresponding tab section
     document.getElementById(tabName).classList.add('active');

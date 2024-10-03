@@ -1,69 +1,70 @@
-:root{
-    /* Transition */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
-}
-
-/* General reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body, h1, h2, p, button {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Tab Container */
-.tab-container {
-    width: 80%; /* Adjust width as needed */
-    height: 500px; /* Set a fixed height */
-    margin: 120px auto; /* Center container vertically */
-    border: 1px solid #1D839F; /* Container border */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Prevent overflow */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
-    position: relative; /* Use relative positioning */
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
+/* Main Container */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
 
 /* Tab Buttons */
 .tab-buttons {
-    display: flex; /* Use flex to position buttons easily */
-    background-color: #1D839F; /* Match background to container's border color */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    display: flex;
+    flex-direction: column;
+    padding: 100px; /* Adds some space from the left */
+
 }
 
-/* Adjust Tab Links */
+/* Tab Link Buttons */
 .tab-link {
-    padding: 10px 20px; /* Padding for button size */
-    background: #5590cf; /* Make button background match container */
+    padding: 15px 25px;
+    margin-bottom: 10px; /* Spacing between buttons */
+    background: #1D839F;
     border: none;
     cursor: pointer;
-    font-size: 14px;
-    color: white; /* Button text color */
+    font-size: 16px;
+    color: white;
+    text-align: left;
     transition: background 0.3s ease, color 0.3s ease;
-}
-
-.tab-link:hover {
-    background: #4178b8; /* Slightly darker shade on hover */
+    margin-left: 100px;
+    justify-content: center;
 }
 
 .tab-link.active {
     background: white;
-    color: #195b8a; /* Match text color to active tab indicator */
+    color: #1D839F;
+    border-color: #1D839F;
+    border: 3px solid;
     font-weight: bold;
-    border-bottom: 2px solid #195b8a; /* Active tab indicator */
+    border-radius: 20px;
+    justify-content: center;
+    margin-left: 30px;
+    transition: background 0.3s ease, color 0.4s ease;
 }
 
 /* Tab Content */
 .tab-content {
-    padding: 20px;
-    border-top: 1px solid #ddd;
-    background: white;
+    margin-top: 70px;
+    flex-grow: 1; /* Take up the rest of the space */
+    padding: 30px;
+    color: white;
+    background: #1D839F; /*para makita gano kalaki yung sakop for content can be turn to white need na*/
+    overflow-y: auto; /* Add scroll if content overflows */
 }
 
-/* Tab Section */
+/* Tab Sections */
 .tab-section {
     display: none;
 }
@@ -73,10 +74,10 @@ body, h1, h2, p, button {
 }
 
 .tab-section h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .tab-section p {
-    font-size: 16px;
+    font-size: 18px;
 }
