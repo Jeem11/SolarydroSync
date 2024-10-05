@@ -59,6 +59,15 @@ h2 {
     box-shadow: 0 5px 15px rgba(34, 27, 27, 0.5);
 }
 
+.settingcrl:hover{
+    border: 3px solid #2691d9;
+    transform: scale(1.2); 
+}
+
+.settingcrl:hover i{
+    color: #2691d9;
+}
+
 .back-btn {
     align-self: flex-start;
     margin-bottom: 20px;
@@ -86,6 +95,7 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .profile-img i {
