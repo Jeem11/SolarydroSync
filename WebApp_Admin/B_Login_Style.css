@@ -71,12 +71,6 @@ html, body {
     margin-bottom: 1rem;
 }
 
-h2{
-    font-family: "Agdasima", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
 form .txt_field{
     position: relative;
     border-bottom: 2px solid #adadad;
