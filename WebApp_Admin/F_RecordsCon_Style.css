@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 2%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.records-page {
+    background-color: #F9F9F9;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainrecontainer{
+    position: static;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 8%;
+    width: 90%;
+    gap: 2px;
+    height: calc(100vh - 72px);
+}
+
+
+.rec-navigation{
+    width: 25%;
+    padding: 30px 10px;
+    background-color: white;
+    display: flex;
+    right: 2px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80px; 
+}
+
+.recordcontainer {
+    width: 100%; 
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-left: 3px solid #d4d6da;
+    right: 2px;
+    overflow-y: auto;
+    color: black;
+}
+
+.Rback-btn{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 1px;
+}
+
+/* Back Button */
+.recordcrl{
+    display: flex;
+    height: 45px;
+    width: 45px;
+    align-items: center;       
+    justify-content: center;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px rgba(34, 27, 27, 0.5);
+}
+
+.recordcrl:hover{
+    border: 3px solid #2691d9;
+    transform: scale(1.2); 
+}
+
+.recordcrl:hover i{
+    color: #2691d9;
+}
+
+.Rback-btn {
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.Rback-btn i {
+    font-size: 2rem;
+    color: #5C5A5A;
+    cursor: pointer;
+}
+
+.R-tab-button {
+    display: block;
+    width: calc(100% - 1px); /* Adjusted width to account for margin */
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    background: white;
+    color: #5C5A5A;
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background 0.7s ease, color 0.7s ease;
+}
+
+.R-tab-button i{
+    font-size: 18px;
+}
+
+.R-tab-button.active {
+    background: #d4d6da;
+    color: #1D839F;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 30px; 
+}
+
+.R-tab-button.active i {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.R-tab-button:not(.active) {
+    color: #5C5A5A; /* Maintain inactive button color */
+    background: white; /* Keep inactive button background */
+}
