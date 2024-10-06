@@ -244,6 +244,7 @@
 .reslocNav .clusterSearch,
 .reslocNav .bridgeSearch {
     height: 30px;
+    border: 1px solid #abb3b8;
     display: none; 
 }
 
