@@ -233,16 +233,24 @@
     gap: 20px; 
     margin-top: 2%;
     width: 100%;
-    border: 1px solid black;
+    border: none;
 }
 
-.reslocNav .bldgSearch{
+.reslocNav .bldgSearch,
+.reslocNav .floorSearch,
+.reslocNav .clusterSearch,
+.reslocNav .bridgeSearch {
     height: 30px;
-
+    margin-right: 5px;
+    display: none; 
 }
 
-
-
+.reslocNav .bldgSearch.active,
+.reslocNav .floorSearch.active,
+.reslocNav .clusterSearch.active,
+.reslocNav .bridgeSearch.active {
+    display: inline-block; 
+}
 
 
 

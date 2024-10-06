@@ -1,6 +1,6 @@
 function updateLabel() {
     const toggle = document.getElementById('resToggle');
-    const label = document.querybldgselector('.rToggleLbl');
+    const label = document.querySelector('.rToggleLbl');
 
     if (toggle.checked) {
         label.textContent = 'Former'; 
@@ -9,33 +9,128 @@ function updateLabel() {
     }
 }
 
-const bldgselect = document.getElementById("bldgSelect");
+document.addEventListener('DOMContentLoaded', function () {
+    //nav location pages:
+    var S_bldg = document.getElementById('bldgSelect');
+    var S_flr = document.getElementById('floorSelect');
+    var S_Clst = document.getElementById('clusterSelect');
+    var S_brg = document.getElementById('bridgeSelect');
 
-const bldgallOption = document.createElement("option");
-bldgallOption.value = "all";
-bldgallOption.textContent = "All";
-bldgselect.appendChild(bldgallOption); 
+    const locSelect = document.getElementById("locationSelect");
 
-for (let i = 1; i <= 30; i++) {
-    const option = document.createElement("option");
-    option.value = i;
-    option.textContent = `Bldg ${i}`; 
-    bldgselect.appendChild(option);
-}
+    const bldgselect = document.getElementById("bldgSelect");
 
-const floorselect = document.getElementById("floorSelect");
+    const bldgallOption = document.createElement("option");
+    bldgallOption.value = "all";
+    bldgallOption.textContent = "All";
+    bldgselect.appendChild(bldgallOption); 
 
-const flrallOption = document.createElement("option");
-flrallOption.value = "all";
-flrallOption.textContent = "All";
-floorselect.appendChild(flrallOption); 
+    for (let i = 1; i <= 30; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = `Bldg ${i}`; 
+        bldgselect.appendChild(option);
+    }
 
-// Create and append floor numbers as "Floor 1-5"
-for (let i = 1; i <= 5; i++) {
-    const option = document.createElement("option");
-    option.value = i;
-    option.textContent = `Floor ${i}`;  
-    floorselect.appendChild(option);
-}
+    const floorselect = document.getElementById("floorSelect");
+
+    const flrallOption = document.createElement("option");
+    flrallOption.value = "all";
+    flrallOption.textContent = "All";
+    floorselect.appendChild(flrallOption); 
+
+    for (let i = 1; i <= 5; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = `Floor ${i}`;  
+        floorselect.appendChild(option);
+    }
+
+    const clusterSelect = document.getElementById("clusterSelect");
+
+    const clrallOption = document.createElement("option");
+    clrallOption.value = "all";
+    clrallOption.textContent = "All";
+    clusterSelect.appendChild(clrallOption);
+
+    for (let i = 1; i <= 7; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = `Cluster ${i}`;
+        clusterSelect.appendChild(option);
+    }
+
+    const bridgeSelect = document.getElementById("bridgeSelect");
+
+    const brgallOption = document.createElement("option");
+    brgallOption.value = "all";
+    brgallOption.textContent = "All";
+    bridgeSelect.appendChild(brgallOption);
+
+    for (let i = 1; i <= 2; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = `Bridge ${i}`;
+        bridgeSelect.appendChild(option);
+    }
+
+    let selectedValue;
+    let selectedBlg;
+    let selectedFloor;
+    let selectedCluster;
+    let selectedBridge;
+
+    locSelect.addEventListener('change', function() {
+        selectedValue = locSelect.value;
+    
+        // Hide all dropdowns first
+        S_bldg.classList.remove('active');
+        S_flr.classList.remove('active');
+        S_Clst.classList.remove('active');
+        S_brg.classList.remove('active');
+    
+        switch (selectedValue) {
+            case "all":
+                break;
+            case "bldg":
+                S_bldg.classList.add('active'); 
+                S_flr.classList.add('active');  
+                break;
+            case "bldg_ext":
+                S_bldg.classList.add('active');
+                break;
+            case "mlla":
+                S_Clst.classList.add('active');
+                break;
+            case "mllabrg":
+                S_brg.classList.add('active'); 
+                break;
+            case "up_mt":
+                S_Clst.classList.add('active');
+                break;
+            default:
+                break;
+        }
+    });
+    
+
+    bldgselect.addEventListener('change', function() {
+        selectedBlg = bldgselect.value;
+    });
+
+    floorselect.addEventListener('change', function(){
+        selectedFloor = floorselect.value;
+    });
+
+    clusterSelect.addEventListener('change', function(){
+        selectedCluster = clusterSelect.value;
+    });
+
+    bridgeSelect.addEventListener('change', function(){
+        selectedBridge = bridgeSelect.value;
+    });
+
+    
 
 
+});

@@ -184,13 +184,14 @@
                     <input type="checkbox" class="restoggle" id="resToggle" onchange="updateLabel()">
                     <label class="rToggleLbl" for="resToggle">Current</label>
                     <i class="bx bx-search">
-                        <input type="text" class="famSearch" id="Fsearch">
+                        <input type="text" class="famSearch" id="Fsearch" placeholder="Search Family Name">
                     </i>
                 </div>
 
                 <div class="residentnav">
                     <button class="authoBtn" id="authorize">Authorized</button>
                     <select class="locSearch" id="locationSelect" name="locationType">
+                        <option value="" disabled selected hidden>Location</option>
                         <option value="all">All</option>
                         <option value="bldg">Building</option>
                         <option value="bldg_ext">Building Extension</option>
@@ -201,15 +202,26 @@
                 </div>
 
                 <div class="reslocNav">
-                    <div class="locBldg">
+                    <div class="loc">
                         <select class="bldgSearch" id="bldgSelect" name="bldgNo">
-                            <!--Javascript options-->
+                            <option value="" disabled selected hidden>Bldg No.</option>
+                            <!--Javascript options: F_ResidentCon_Script.js-->
                         </select>
                         <select class="floorSearch" id="floorSelect" name="flrNo">
-                            <!--Javascript options-->
+                            <option value="" disabled selected hidden>Floor No.</option>
+                            <!--Javascript options: F_ResidentCon_Script.js-->
+                        </select>
+                        <select class="clusterSearch" id="clusterSelect" name="clrNo">
+                            <option value="" disabled selected hidden>Cluster No.</option>
+                            <!--Javascript options: F_ResidentCon_Script.js-->
+                        </select>
+                        <select class="bridgeSearch" id="bridgeSelect" name="brgNo">
+                            <option value="" disabled selected hidden>Bridge No.</option>
+                            <!--Javascript options: F_ResidentCon_Script.js-->
                         </select>
                     </div>
                 </div>
+
 
 
 
