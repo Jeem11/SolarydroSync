@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
     });
-    
 
     bldgselect.addEventListener('change', function() {
         selectedBlg = bldgselect.value;
