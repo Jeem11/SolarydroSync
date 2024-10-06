@@ -181,7 +181,37 @@
         <div class="recordcontainer">
             <!--Residents-->
             <div class="resident-container">
-                Resident
+
+                <div class="residentnav">
+                    <input type="checkbox" class="restoggle" id="resToggle" onchange="updateLabel()">
+                    <label class="rToggleLbl" for="resToggle">Current</label>
+                    <i class="bx bx-search">
+                        <input type="text" class="famSearch" id="Fsearch">
+                    </i>
+                </div>
+
+                <div class="residentnav">
+                    <button class="authoBtn" id="authorize">Authorized</button>
+                    <select class="locSearch" id="locationSelect" name="locationType">
+                        <option value="all">All</option>
+                        <option value="bldg">Building</option>
+                        <option value="bldg_ext">Building Extension</option>
+                        <option value="mlla">Maralla</option>
+                        <option value="mllabrg">Maralla Bridge</option>
+                        <option value="up_mt">Upper Smokey Mountain</option>
+                    </select>
+                </div>
+            
+
+                <div class="currentres-container">
+
+                </div>
+
+
+
+
+
+                <script src="F_ResidentCon_Script.js"></script>
             </div>
 
             <!--Staff-->
