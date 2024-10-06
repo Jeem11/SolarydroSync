@@ -9,6 +9,8 @@ function updateLabel() {
     }
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     //nav location pages:
     var S_bldg = document.getElementById('bldgSelect');
@@ -134,7 +136,32 @@ document.addEventListener('DOMContentLoaded', function () {
         selectedBridge = bridgeSelect.value;
     });
 
+    const addSetContainer = document.getElementById('addSetContainer');
+    const additionalButtons = document.querySelector('.additional-buttons');
+    let isRolled = false;
+
+    // Add a click event listener to addSetContainer
+    addSetContainer.addEventListener('click', () => {
+        if (isRolled) {
+            // Remove the 'roll' and 'show' classes, and add the 'hide' class
+            addSetContainer.classList.remove('roll', 'active-state');
+            additionalButtons.classList.remove('show');
+            additionalButtons.classList.add('hide');
+        } else {
+            // Add the 'roll' and 'show' classes, and the 'active-state' class to keep the color
+            addSetContainer.classList.add('roll', 'active-state');
+            additionalButtons.classList.remove('hide');
+            additionalButtons.classList.add('show');
+        }
+        isRolled = !isRolled; // Toggle the state
+    });
+
+
+
     
 
+    
+    
+    
 
 });

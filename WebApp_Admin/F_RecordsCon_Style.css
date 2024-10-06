@@ -217,8 +217,6 @@
     background-color: #1f76f8;
     border: 1px solid rgb(55, 147, 223);
     color: white;
-    height: 28px;
-    width: 14%;
 }
 
 .residentnav .locSearch{
@@ -266,15 +264,20 @@
 .res_addSettings .addSet_container {
     margin: 20px;
     display: flex;
-    height: 55px;
-    width: 55px;
+    height: 60px;
+    width: 60px;
+    background-color: white;
     align-items: center;       
     justify-content: center;
     border-radius: 100%;
-    box-shadow: 0 5px 15px rgba(34, 27, 27, 0.5);
     border: 5px solid #abb3b8;
+    box-shadow: 0 0 15px rgba(34, 27, 27, 0.5);
     cursor: pointer;
-} 
+    transition: transform 0.6s;
+    transform-origin: center;
+    z-index: 20; 
+    position: relative;
+}
 
 .addSet_container i {
     font-size: 35px;
@@ -282,16 +285,80 @@
     color: #abb3b8;
 }
 
-.addSet_container:hover{
-    border: 5px solid #2691d9;
-    transform: scale(1.1); 
+.active-state {
+    border-color: #2691d9 !important; 
 }
 
-.addSet_container:hover i{
+.active-state i {
+    color: #2691d9 !important; 
+}
+
+.addSet_container:hover {
+    border: 5px solid #2691d9;
+    box-shadow: 0 0 10px #2691d9;
+}
+
+.addSet_container:hover i {
     color: #2691d9;
 }
 
+.additional-buttons {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end;
+    position: absolute;
+    top: 25%; 
+    gap: 7px;
+    z-index: 5;
+    transform: translateX(18%);
+    transition: 1s ease; 
+    opacity: 0; 
+    pointer-events: none;
+}
 
+.additional-btn {
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Agdasima", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 2px;
+    border: 1px solid #abb3b8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.additional-buttons .additional-btn:hover{
+    background-color: #00b8eb;
+    border: 1px solid rgb(55, 147, 223);
+    color: white;
+}
+
+.additional-buttons .additional-btn:active{
+    background-color: #1f76f8;
+    border: 1px solid rgb(55, 147, 223);
+    color: white;
+}
+
+.roll {
+    transform: translateY(0px) rotate(-90deg); 
+}
+
+.show {
+    transform: translateX(0);
+    left: -115%; 
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.hide {
+    transition: 0.8s ease;
+    opacity: 0; 
+    pointer-events: none; 
+}
 
 
 
