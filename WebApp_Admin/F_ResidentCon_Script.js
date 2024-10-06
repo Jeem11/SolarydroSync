@@ -83,11 +83,15 @@ document.addEventListener('DOMContentLoaded', function () {
     locSelect.addEventListener('change', function() {
         selectedValue = locSelect.value;
     
-        // Hide all dropdowns first
         S_bldg.classList.remove('active');
         S_flr.classList.remove('active');
         S_Clst.classList.remove('active');
         S_brg.classList.remove('active');
+
+        bldgselect.selectedIndex = 0; 
+        floorselect.selectedIndex = 0; 
+        clusterSelect.selectedIndex = 0; 
+        bridgeSelect.selectedIndex = 0; 
     
         switch (selectedValue) {
             case "all":
