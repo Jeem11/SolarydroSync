@@ -1,4 +1,8 @@
-/* Main header */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');/* Main header */
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
 .main-header {
     padding: 15px;
     background-color: #02D8E9;
