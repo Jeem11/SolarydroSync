@@ -13,7 +13,7 @@ body {
     background-color: white;
 }
 .table th {
-    background-color: #1D839F; /* Header background color */
+    background-color: #75975e; /* Header background color */
     color: white; /* Header text color */
 }
 
@@ -30,11 +30,11 @@ body {
 }
 
 .text-center {
-    color: #1D839F; /* Center text color */
+    color: #75975e; /* Center text color */
 }
 
 h2 {
     font-size: 24px;
-    color: #1D839F;
+    color: #75975e;
     font-weight: bold;
 }

@@ -15,7 +15,7 @@ body {
     background: #fff;
     box-shadow: 0 0 10px rgba(19, 143, 220, 0.1);
     border-radius: 10px;
-    border: 2px solid #1D839F;
+    border: 2px solid #75975e;
     position: relative; /* Enable positioning for child elements */
 }
 
@@ -27,7 +27,7 @@ body {
     width: 150px; /* Circle diameter */
     height: 150px; /* Circle diameter */
     border-radius: 50%;
-    border: 2px solid #1D839F;
+    border: 2px solid #75975e;
     background-color: #f8f8f8;
     overflow: hidden; /* Clip overflowing elements */
     display: flex;
@@ -100,7 +100,7 @@ body {
 
 /* Input focus styling */
 .form-group input:focus {
-    border-bottom: 2px solid #6eb9d7; /* Change bottom border color on focus */
+    border-bottom: 2px solid #658354; /* Change bottom border color on focus */
     outline: none;
 }
 
@@ -117,7 +117,7 @@ body {
 
 .authorize-button {
     padding: 10px 20px;
-    background-color: #6eb9d7;
+    background-color: #658354;
     color: white;
     border: none;
     border-radius: 5px;
@@ -126,7 +126,7 @@ body {
 }
 
 .authorize-button:hover {
-    background-color: #1D839F;
+    background-color: #75975e;
 }
 
 /* Add styles for the modal */
@@ -172,21 +172,21 @@ body {
 }
 
 .btn-yes {
-    background-color: #6eb9d7;
+    background-color: #658354;
     color: white;
 }
 
 .btn-no {
-    background-color: #1D839F;
+    background-color: #75975e;
     color: white;
 }
 
 .btn-yes:hover {
     opacity: 0.8;
-    background-color: #1D839F;
+    background-color: #75975e;
 }
 
 .btn-no:hover{
     opacity: 0.8;
-    background-color: #6eb9d7;
+    background-color: #658354;
 }
