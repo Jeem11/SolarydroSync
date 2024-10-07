@@ -16,16 +16,16 @@ body {
     margin: 20px auto;
 }
 
-.activity-title {
-    margin-bottom: 20px;
-    color: #3C0E6F;
-}
-
-/* Header Section */
-.header-section {
+/* Activity Log Header */
+.activity-log-header {
     display: flex;
     justify-content: space-between; /* Space between title and sort section */
     width: 100%;
+    margin-bottom: 20px; /* Space between header and form */
+}
+
+.activity-title {
+    color: #3C0E6F;
 }
 
 /* Sort Section Styles */
@@ -33,7 +33,6 @@ body {
     display: flex;
     flex-direction: column; /* Align elements vertically */
     align-items: flex-end; /* Align to the right */
-    margin-left: auto; /* Move the sort section to the right */
 }
 
 /* Form Section Styles */
@@ -41,7 +40,6 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px; /* Space between the header and form */
 }
 
 /* Form Group Styles */
