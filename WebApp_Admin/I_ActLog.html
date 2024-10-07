@@ -71,25 +71,10 @@
 
     <!-- Main Container -->
     <div class="container">
-        <h2>Activity Log</h2>
+        <h2 class="activity-title">Activity Log</h2>
         
-        <!-- Activity Log Form -->
-        <form id="activityLogForm">
-            <div class="form-group">
-                <label for="category">Category:</label>
-                <select id="category">
-                    <option value="notification">Notification</option>
-                    <option value="request">Request</option>
-                    <option value="reports">Reports</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="date">Date:</label>
-                <input type="date" id="date">
-            </div>
-
-            <div class="form-group">
+        <div class="form-container">
+            <div class="sort-by">
                 <label for="sortBy">Sort By:</label>
                 <select id="sortBy">
                     <option value="myLogs">My Logs</option>
@@ -99,8 +84,25 @@
                 </select>
             </div>
 
-            <button type="submit">Submit</button>
-        </form>
+            <div class="category-date">
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="notification">Notification</option>
+                        <option value="request">Request</option>
+                        <option value="reports">Reports</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
+        </div>
+
+        <!-- Blank Box -->
+        <div class="blank-box"></div>
     </div>
     
     <script src="C_Navigation_Script.js"></script>
