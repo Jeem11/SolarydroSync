@@ -5,10 +5,13 @@ body {
 }
 
 .table {
-    background-color: #1D839F; /* Table background color */
+    background-color: white; /* Table background color */
     color: white; /* Text color for table cells */
 }
 
+.table tr{
+    background-color: white;
+}
 .table th {
     background-color: #1D839F; /* Header background color */
     color: white; /* Header text color */
