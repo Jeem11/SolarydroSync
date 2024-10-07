@@ -19,7 +19,7 @@ body {
 /* Activity Log Title */
 .activity-title {
     color: #3C0E6F;
-    margin-bottom: 20px; /* Space between title and next section */
+    margin-bottom: 10px; /* Space between title and next section */
 }
 
 /* Sort Section Styles */
@@ -33,7 +33,7 @@ body {
 .form-section {
     display: flex;
     justify-content: flex-start; /* Align to the left */
-    width: 100%;
+    width: 50%;
     margin-top: 10px; /* Space between sections */
 }
 
