@@ -4,51 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolarHydroSync Activity Log</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-<!-- Title Header -->
-<header class="main-header">
-    <div class="logo-name">
-        <span class="header-title">SOLARHYDROSYNC</span>
-    </div>
-    <div class="user-info">
-        <i class='bx bx-user-circle'></i>
-        <span>A/HA Name...</span>
-        <div class="quick-access">
-            <i class='bx bx-dots-horizontal-rounded' id="dropdownToggle"></i>
-            <div class="dropdown-content" id="dropdownMenu">
-                <a href="#">
-                    <i class='bx bx-cog icon'></i>
-                    <span class="drop-text">Account Settings</span>
-                </a>
-                <a href="#">
-                    <i class='bx bx-bell icon'></i>
-                    <span class="drop-text">Notifications</span>
-                </a>
-                <a href="#">
-                    <i class='bx bx-time icon'></i>
-                    <span class="drop-text">Activity Log</span>
-                </a>
-                <div class="logout">
-                    <a href="#">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="drop-text">Logout</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-/* Header Styles */
-.main-header {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between elements */
-    align-items: center; /* Center items vertically */
-    padding: 10px 20px; /* Padding for the header */
-    background-color: #F9F9F9; /* Header background color */
-    border-bottom: 2px solid #D1D1D1; /* Bottom border for separation */
-}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    <style>
+        /* Header Styles */
+        .main-header {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between elements */
+            align-items: center; /* Center items vertically */
+            padding: 10px 20px; /* Padding for the header */
+            background-color: #2691d9; /* Header background color */
+            border-bottom: 2px solid #D1D1D1; /* Bottom border for separation */
+        }
         /* Content header styling */
         .header {
             padding: 20px;
@@ -78,16 +43,28 @@
             margin: 20px 0; /* Optional margin for aesthetics on top and bottom */
         }
     </style>
-</head>
-<body>
-
-    <!-- Page Container with 1-inch side padding -->
-    <div class="page-border">
-        <!-- SOLARHYDROSYNC Main Header -->
-        <div class="main-header">
-            SOLARHYDROSYNC
+</head><body>
+    <!-- SOLARHYDROSYNC Main Header -->
+    <header class="main-header">
+        <div class="logo-name">            <span class="header-title">SOLARHYDROSYNC</span>
         </div>
+        <div class="user-info d-flex align-items-center">
+            <i class='bx bx-user-circle'></i>
+            <span class="ms-2">A/HA Name...</span>
+            <div class="dropdown ms-3">
+                <i class='bx bx-dots-horizontal-rounded' id="dropdownToggle" data-bs-toggle="dropdown"></i>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownToggle">
+                    <li><a class="dropdown-item" href="#"><i class='bx bx-cog'></i> Account Settings</a></li>
+                    <li><a class="dropdown-item" href="#"><i class='bx bx-bell'></i> Notifications</a></li>
+                    <li><a class="dropdown-item" href="#"><i class='bx bx-time'></i> Activity Log</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"><i class='bx bx-log-out'></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
+    <!-- Page Container with 1-inch side padding -->    <div class="page-border">
         <!-- Main content area -->
         <div class="content">
             <!-- Header -->
@@ -111,9 +88,7 @@
                         <option value="requests">Requests</option>
                         <option value="reports">Reports</option>
                     </select>
-                    <input type="date" class="form-control" style="width: 120px;"> <!-- Smaller size -->
-                </div>
-                
+                    <input type="date" class="form-control" style="width: 120px;"> <!-- Smaller size -->                </div>
             </div>
 
             <!-- Form Section with Border -->
@@ -123,44 +98,7 @@
                     <!-- Future logs or content will go here -->
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-<header class="main-header">
-    <div class="logo-name">
-        <span class="header-title">SOLARHYDROSYNC</span>
-    </div>
-    <div class="user-info">
-        <i class='bx bx-user-circle'></i>
-        <span>A/HA Name...</span>
-        <div class="quick-access">
-            <i class='bx bx-dots-horizontal-rounded' id="dropdownToggle"></i>
-            <div class="dropdown-content" id="dropdownMenu">
-                <a href="#">
-                    <i class='bx bx-cog icon'></i>
-                    <span class="drop-text">Account Settings</span>
-                </a>
-                <a href="#">
-                    <i class='bx bx-bell icon'></i>
-                    <span class="drop-text">Notifications</span>
-                </a>
-                <a href="#">
-                    <i class='bx bx-time icon'></i>
-                    <span class="drop-text">Activity Log</span>
-                </a>
-                <div class="logout">
-                    <a href="#">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="drop-text">Logout</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
+        </div>    </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
