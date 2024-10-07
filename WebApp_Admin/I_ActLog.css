@@ -1,0 +1,73 @@
+body {
+    background-color: #F9F9F9;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align to the top */
+    width: 70%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+/* Activity Log Title */
+.activity-title {
+    color: #3C0E6F;
+    margin-bottom: 10px; /* Space between title and next section */
+}
+
+/* Sort Section Styles */
+.sort-section {
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    margin-bottom: 20px; /* Space between sort section and form section */
+}
+
+/* Form Section Styles */
+.form-section {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    width: 50%;
+    margin-top: 10px; /* Space between sections */
+}
+
+/* Form Group Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; /* Space between form groups */
+}
+
+label {
+    font-size: 0.9rem;
+    color: #A9A9A9;
+    margin-bottom: 5px;
+}
+
+select, input[type="date"] {
+    padding: 8px;
+    border: 1px solid #A9A9A9;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+select:focus, input[type="date"]:focus {
+    border-color: #2691d9;
+}
+
+/* Blank Box */
+.blank-box {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    border: 1px solid #A9A9A9;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #F5F5F5; /* Light background color for the blank box */
+}
