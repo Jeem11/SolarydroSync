@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the left */
-    justify-content: center;
+    justify-content: flex-start; /* Align to the top */
     width: 70%;
     background-color: #FFFFFF;
     padding: 20px;
@@ -38,8 +38,9 @@ body {
 /* Form Section Styles */
 .form-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align to the left */
     width: 100%;
+    margin-top: 10px; /* Space between title and form section */
 }
 
 /* Form Group Styles */
