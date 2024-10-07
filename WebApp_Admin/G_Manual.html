@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Resident Form</title>
+    <link rel="stylesheet" href="G_Manual.css">
+    <style>
+        /* Add styles for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            justify-content: center; /* Center alignment */
+            align-items: center; /* Center alignment */
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border: 1px solid #b4afaf;
+            width: 400px; /* Set a specific width */
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow effect */
+        }
+
+        .modal-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            margin-top: 20px;
+        }
+
+        .modal-button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn-yes {
+            background-color: #6eb9d7;
+            color: white;
+        }
+
+        .btn-no {
+            background-color: #1D839F;
+            color: white;
+        }
+
+        .btn-yes:hover {
+            opacity: 0.8;
+            background-color: #1D839F;
+        }
+
+        .btn-no:hover{
+            opacity: 0.8;
+            background-color: #6eb9d7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Image Upload Container positioned at the top-right -->
+        <div class="image-upload-container">
+            <div class="image-preview-container">
+                <img id="imagePreview" src="#" alt="Image Preview">
+            </div>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <form class="family-resident-form" id="residentForm">
+            <div class="form-group">
+                <label for="familyName">Family Name</label>
+                <input type="text" id="familyName" placeholder="Enter Family Name">
+            </div>
+
+            <div class="form-group">
+                <label for="familyId">Family ID</label>
+                <input type="text" id="familyId" placeholder="Family ID" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="residentName">Resident Name</label>
+                <input type="text" id="residentName" placeholder="Enter Resident Name">
+            </div>
+
+            <div class="form-group">
+                <label for="residentId">Resident ID</label>
+                <input type="text" id="residentId" placeholder="Resident ID" disabled>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="authorize-button">Authorize</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Custom Modal Structure -->
+    <div class="modal" id="customModal">
+        <div class="modal-content">
+            <div class="modal-header">Authorize Resident?</div>
+            <div class="modal-footer">
+                <button class="modal-button btn-yes" id="btnYes">Yes</button>
+                <button class="modal-button btn-no" id="btnNo">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="G_Manual.js"></script>
+</body>
+</html>
