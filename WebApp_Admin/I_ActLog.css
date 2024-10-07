@@ -22,6 +22,7 @@ body {
     justify-content: space-between; /* Space between title and sort section */
     width: 100%;
     margin-bottom: 20px; /* Space between header and form */
+    align-items: center;
 }
 
 .activity-title {
