@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 100%; /* Increased width for better spacing */
+    margin: 100px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Allow positioning of child elements */
+}
+
+.family-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.email-contact-group {
+    display: flex;
+    justify-content: space-between; /* Space between email and contact */
+    align-items: flex-start; /* Align labels at the top */
+    gap: 20px; /* Add gap between email and contact containers */
+}
+
+.email-container,
+.contact-container {
+    flex: 1; /* Allow containers to take equal space */
+}
+
+#familyName {
+    width: 30%;
+}
+
+#familyEmail,
+#familyContact {
+    width: 61.5%; 
+}
+
+input[type="tel"] {
+    margin-top: 5px; /* Space above the input field */
+}
+
+/* Adjusted styles for buttons */
+.add-button, 
+.submit-button {
+    padding: 5px 10px; /* Smaller padding for consistent size */
+    background-color: #6eb9d7; /* Blue color for Add button */
+    color: #075166;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    width: 80px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    display: flex; /* Flex for centering text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+.add-button:hover {
+    background-color: #1D839F; /* Darker blue on hover */
+    color: white;
+}
+
+.submit-button {
+    background-color: #1D839F; /* Green color for Submit button */
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #6eb9d7; /* Darker green on hover */
+    color: #075166;
+}
+
+/* Styles for positioning buttons */
+.button-container {
+    position: absolute; /* Position the button container */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: flex; /* Flex for horizontal alignment */
+    gap: 10px; /* Space between buttons */
+}
+
+.back-button {
+    background-color: #fff; /* Background color for the button */
+    border: none; /* No border */
+    color: #0886b8; /* Text color */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon and text */
+    width: 40px; /* Set the width */
+    height: 40px; /* Set the height */
+    border-radius: 50%; /* Make the button circular */
+    margin-bottom: 20px; /* Space below the back button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.back-button i {
+    margin-right: 0; /* Remove margin since the button is circular */
+}
+
+.back-button:hover {
+    background-color: #1D839F; /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* New styles for additional info container */
+.additional-info-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f7f7f7; /* Light background for additional info */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between; /* Space between items in the row */
+    margin-bottom: 15px; /* Space below each row */
+}
+
+.form-group {
+    flex: 1; /* Each form-group takes equal space */
+    margin-right: 10px; /* Space between columns */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove margin for the last item in the row */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center; /* Center alignment */
+    align-items: center; /* Center alignment */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #b4afaf;
+    width: 400px; /* Set a specific width */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow effect */
+}
+
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-yes {
+    background-color: #6eb9d7;
+    color: white;
+}
+
+.btn-no {
+    background-color: #1D839F;
+    color: white;
+}
+
+.btn-yes:hover {
+    opacity: 0.8;
+    background-color: #1D839F;
+}
+
+.btn-no:hover {
+    opacity: 0.8;
+    background-color: #6eb9d7;
+}

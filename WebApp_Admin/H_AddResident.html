@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="H_AddResident.css">
+    <title>Add Resident Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <button class="back-button">
+            <i class='bx bx-arrow-back'></i>
+        </button>
+        <form class="family-form" id="residentForm">
+            <div class="form-group">
+                <label for="familyName">Family Name</label>
+                <input type="text" id="familyName" placeholder="Enter Family Name:" required>
+            </div>
+            <div class="form-group email-contact-group">
+                <div class="email-container">
+                    <label for="familyEmail">Family Email</label>
+                    <input type="email" id="familyEmail" placeholder="Enter Family Email:" required>
+                </div>
+                <div class="contact-container">
+                    <label for="familyContact">Family Contact No.</label>
+                    <input type="tel" id="familyContact" placeholder="Enter Number" required>
+                </div>
+            </div>
+
+            <!-- New container for additional information -->
+            <div id="additional-info-section">
+                <div class="additional-info-container">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter First Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="middleName">Middle Name (Optional)</label>
+                            <input type="text" id="middleName" placeholder="Enter Middle Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="extension">Extension (Optional)</label>
+                            <input type="text" id="extension" placeholder="Enter Extension">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="placeOfBirth">Place of Birth</label>
+                            <input type="text" id="placeOfBirth" placeholder="Enter Place of Birth" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Birthday</label>
+                            <input type="date" id="birthday" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sex">Sex</label>
+                            <select id="sex" required>
+                                <option value="" disabled selected>Select Sex</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status" required>
+                                <option value="" disabled selected>Select Status</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="citizenship">Citizenship</label>
+                        <input type="text" id="citizenship" placeholder="Enter Citizenship" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Occupation</label>
+                        <div>
+                            <input type="checkbox" id="employed" name="occupation" value="employed">
+                            <label for="employed">Employed</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="unemployed" name="occupation" value="unemployed">
+                            <label for="unemployed">Unemployed</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pwd" name="occupation" value="pwd">
+                            <label for="pwd">PWD</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ofw" name="occupation" value="ofw">
+                            <label for="ofw">OFW</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="soloParent" name="occupation" value="soloParent">
+                            <label for="soloParent">Solo Parent</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="outOfSchoolChildren" name="occupation" value="outOfSchoolChildren">
+                            <label for="outOfSchoolChildren">Out of School (Children)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="outOfSchoolYouth" name="occupation" value="outOfSchoolYouth">
+                            <label for="outOfSchoolYouth">Out of School (Youth)</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="indigenousPeople" name="occupation" value="indigenousPeople">
+                            <label for="indigenousPeople">Indigenous People</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="button-small add-button" id="addResident">Add</button>
+                <button type="button" class="button-small submit-button" id="submitButton">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Custom Modal Structure -->
+    <div class="modal" id="customModal">
+        <div class="modal-content">
+            <div class="modal-header">Save New Resident Record?</div>
+            <div class="modal-footer">
+                <button class="modal-button btn-yes" id="btnYes">Yes</button>
+                <button class="modal-button btn-no" id="btnNo">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const addResidentButton = document.getElementById('addResident');
+        const additionalInfoSection = document.getElementById('additional-info-section');
+
+        addResidentButton.addEventListener('click', () => {
+            // Create a new additional info container
+            const newContainer = document.createElement('div');
+            newContainer.classList.add('additional-info-container');
+            newContainer.innerHTML = `
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" placeholder="Enter Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" placeholder="Enter First Name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="middleName">Middle Name (Optional)</label>
+                        <input type="text" placeholder="Enter Middle Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="extension">Extension (Optional)</label>
+                        <input type="text" placeholder="Enter Extension">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="placeOfBirth">Place of Birth</label>
+                        <input type="text" placeholder="Enter Place of Birth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">Birthday</label>
+                        <input type="date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sex">Sex</label>
+                        <select required>
+                            <option value="" disabled selected>Select Sex</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="citizenship">Citizenship</label>
+                    <input type="text" placeholder="Enter Citizenship" required>
+                </div>
+                <div class="form-group">
+                    <label>Occupation</label>
+                    <div>
+                        <input type="checkbox" name="occupation" value="employed">
+                        <label>Employed</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="unemployed">
+                        <label>Unemployed</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="pwd">
+                        <label>PWD</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="ofw">
+                        <label>OFW</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="soloParent">
+                        <label>Solo Parent</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="outOfSchoolChildren">
+                        <label>Out of School (Children)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="outOfSchoolYouth">
+                        <label>Out of School (Youth)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="occupation" value="indigenousPeople">
+                        <label>Indigenous People</label>
+                    </div>
+                </div>
+            `;
+            additionalInfoSection.appendChild(newContainer);
+        });
+
+        // Modal functionality
+        const submitButton = document.getElementById('submitButton');
+        const customModal = document.getElementById('customModal');
+        const btnYes = document.getElementById('btnYes');
+        const btnNo = document.getElementById('btnNo');
+
+        submitButton.addEventListener('click', () => {
+            customModal.style.display = 'flex'; // Show the modal
+        });
+
+        btnYes.addEventListener('click', () => {
+            alert('Form Submitted Successfully!');
+            customModal.style.display = 'none'; // Hide the modal
+            // Here you can add logic to submit the form or process it
+            // For example, document.getElementById('residentForm').submit();
+        });
+
+        btnNo.addEventListener('click', () => {
+            customModal.style.display = 'none'; // Hide the modal
+        });
+
+        // Close the modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target === customModal) {
+                customModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
