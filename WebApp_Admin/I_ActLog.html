@@ -15,78 +15,6 @@
     <link rel="stylesheet" href="activity_log.css">
 </head>
 <body>
-     <!--Sidebar-->
-     <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="tempLogo.png" alt="logo">
-                </span>
-                <div class="text header-text">
-                    <span class="address"> Barangay 128 </span>
-                </div>
-            </div>
-            <br>
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-        <div class="menu-bar">
-            <div class="menu">
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-clipboard icon'></i>
-                        <span class="text nav-text"> Request</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-alarm-exclamation icon'></i>
-                        <span class="text nav-text"> Report</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-file icon'></i>
-                        <span class="text nav-text"> Manual Authorization</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-user-pin icon'></i>
-                        <span class="text nav-text"> Staff Board</span>
-                    </a>
-                </li>
-                <ul class="menu-links"></ul>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-home-alt icon'></i>
-                        <span class="text nav-text"> Home</span>
-                    </a>
-                </li>
-            </div>
-
-            <div class="bottom-content">
-                <li>
-                    <a href="#">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text"> Logout</span>
-                    </a>
-                </li>
-                
-                <li class="mode">
-                    <div class="moon-sun">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark Mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-            </div>
-        </div>
-    </nav>
-
     <!-- Header -->
     <header class="main-header">
         <div class="logo-name">
@@ -141,16 +69,11 @@
         </div>
     </footer>
 
-    <!-- Opaque Board -->
-    <div class='board'></div>
-
-    <!-- JavaScript -->
-    <script src="C_Navigation_Script.js"></script>
-
     <!-- Main Container -->
     <div class="container">
-        <!-- Activity Log Form -->
         <h2>Activity Log</h2>
+        
+        <!-- Activity Log Form -->
         <form id="activityLogForm">
             <div class="form-group">
                 <label for="category">Category:</label>
@@ -180,6 +103,7 @@
         </form>
     </div>
     
+    <script src="C_Navigation_Script.js"></script>
     <script src="E_AcctSetting_Script.js"></script>
 </body>
 </html>
