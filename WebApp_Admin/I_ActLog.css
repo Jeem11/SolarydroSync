@@ -16,24 +16,17 @@ body {
     margin: 20px auto;
 }
 
-/* Activity Log Header */
-.activity-log-header {
-    display: flex;
-    justify-content: space-between; /* Space between title and sort section */
-    width: 100%;
-    margin-bottom: 20px; /* Space between header and form */
-    align-items: center;
-}
-
+/* Activity Log Title */
 .activity-title {
     color: #3C0E6F;
+    margin-bottom: 20px; /* Space between title and next section */
 }
 
 /* Sort Section Styles */
 .sort-section {
     display: flex;
     flex-direction: column; /* Align elements vertically */
-    align-items: flex-end; /* Align to the right */
+    margin-bottom: 20px; /* Space between sort section and form section */
 }
 
 /* Form Section Styles */
@@ -41,7 +34,7 @@ body {
     display: flex;
     justify-content: flex-start; /* Align to the left */
     width: 100%;
-    margin-top: 10px; /* Space between title and form section */
+    margin-top: 10px; /* Space between sections */
 }
 
 /* Form Group Styles */

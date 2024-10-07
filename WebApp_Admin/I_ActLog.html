@@ -51,19 +51,20 @@
 
     <!-- Main Container -->
     <div class="container">
-        <div class="activity-log-header">
-            <h2 class="activity-title">Activity Log</h2>
-            <div class="sort-section">
-                <label for="sortBy">Sort By:</label>
-                <select id="sortBy">
-                    <option value="myLogs">My Logs</option>
-                    <option value="headAdmins">Head Admins</option>
-                    <option value="admins">Admins</option>
-                    <option value="clusterLeaders">Cluster Leaders</option>
-                </select>
-            </div>
+        <h2 class="activity-title">Activity Log</h2>
+
+        <!-- Sort and Filter Section -->
+        <div class="sort-section">
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy">
+                <option value="myLogs">My Logs</option>
+                <option value="headAdmins">Head Admins</option>
+                <option value="admins">Admins</option>
+                <option value="clusterLeaders">Cluster Leaders</option>
+            </select>
         </div>
 
+        <!-- Form Section -->
         <div class="form-section">
             <div class="form-group">
                 <label for="category">Category:</label>
@@ -81,7 +82,9 @@
         </div>
 
         <!-- Blank Box for Data -->
-        <div class="blank-box"></div>
+        <div class="blank-box">
+            <!-- Additional content can go here -->
+        </div>
     </div>
 
     <script src="C_Navigation_Script.js"></script>
