@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANCELLATION</title>
+    <link rel="stylesheet" href="Cancellation.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CANCELLATION</h1>
+        <div class="record">
+            <div class="field">
+                <label>FAMILY NAME:</label>
+                <div class="family-name" id="familyName"></div> <!-- Dynamic family name -->
+            </div>
+            <div class="field">
+                <label>ANNOUNCEMENT:</label>
+                <div class="announcement-frame">
+                    <p>We regret to inform you that due to unforeseen circumstances, the event has been cancelled. We apologize for any inconvenience this may cause.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulated dynamic family name (replace this with actual logic)
+        const familyName = "  "; // Replace with logic to get the logged-in user's family name
+        document.getElementById("familyName").textContent = familyName;
+    </script>
+</body>
+</html>
