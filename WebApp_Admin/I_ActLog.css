@@ -21,31 +21,34 @@ body {
     color: #3C0E6F;
 }
 
-/* Form Container Styles */
-.form-container {
+/* Header Section */
+.header-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between title and sort section */
     width: 100%;
 }
 
-.sort-by {
+/* Sort Section Styles */
+.sort-section {
     display: flex;
-    flex-direction: column;
-    margin-right: 20px; /* Space between sort and other elements */
-    width: 30%; /* Set width for sorting */
+    flex-direction: column; /* Align elements vertically */
+    align-items: flex-end; /* Align to the right */
+    margin-left: auto; /* Move the sort section to the right */
 }
 
-.category-date {
+/* Form Section Styles */
+.form-section {
     display: flex;
-    flex-direction: column;
-    width: 60%; /* Set width for category and date */
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; /* Space between the header and form */
 }
 
 /* Form Group Styles */
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-right: 20px; /* Space between form groups */
 }
 
 label {

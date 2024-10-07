@@ -49,32 +49,11 @@
         </div>
     </header>
 
-    <!-- Footer Navigation Bar -->
-    <footer class="bottom-nav">
-        <div class="footer-buttons">
-            <a href="#" class="footer-link">
-                <i class='bx bx-envelope icon'></i>
-                <span class="tooltiptext">Announcements</span>
-            </a>
-            <a href="#" class="footer-link">
-                <div class="icon-box">
-                    <i class='bx bx-droplet icon'></i>
-                    <span class="tooltiptext">Water Monitoring Distribution</span>
-                </div>
-            </a>
-            <a href="F_Records_Res.html" class="footer-link">
-                <i class='bx bx-archive icon'></i>
-                <span class="tooltiptext">Records</span>
-            </a>
-        </div>
-    </footer>
-
     <!-- Main Container -->
     <div class="container">
-        <h2 class="activity-title">Activity Log</h2>
-        
-        <div class="form-container">
-            <div class="sort-by">
+        <div class="header-section">
+            <h2 class="activity-title">Activity Log</h2>
+            <div class="sort-section">
                 <label for="sortBy">Sort By:</label>
                 <select id="sortBy">
                     <option value="myLogs">My Logs</option>
@@ -83,28 +62,28 @@
                     <option value="clusterLeaders">Cluster Leaders</option>
                 </select>
             </div>
+        </div>
 
-            <div class="category-date">
-                <div class="form-group">
-                    <label for="category">Category:</label>
-                    <select id="category">
-                        <option value="notification">Notification</option>
-                        <option value="request">Request</option>
-                        <option value="reports">Reports</option>
-                    </select>
-                </div>
+        <div class="form-section">
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="notification">Notification</option>
+                    <option value="request">Request</option>
+                    <option value="reports">Reports</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date">
-                </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date">
             </div>
         </div>
 
-        <!-- Blank Box -->
+        <!-- Blank Box for Data -->
         <div class="blank-box"></div>
     </div>
-    
+
     <script src="C_Navigation_Script.js"></script>
     <script src="E_AcctSetting_Script.js"></script>
 </body>
