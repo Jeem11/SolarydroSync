@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
             buttons.forEach(btn => {
                 btn.classList.remove('active');
                 btn.style.backgroundColor = '#fff'; // Original color
-                btn.style.color = '#1D839F'; // Original text color
+                btn.style.color = '#03045eF'; // Original text color
                 btn.style.borderColor = 'transparent'; // Remove border color
             });
 
             // Add active class and styles to clicked button
             this.classList.add('active');
             this.style.backgroundColor = '#d4d6da'; // Change background
-            this.style.color = '#1D839F'; // Change text color
+            this.style.color = '#03045e'; // Change text color
             this.style.borderColor = '#1D839F'; // Set border color
 
             // Remove active class from all content items

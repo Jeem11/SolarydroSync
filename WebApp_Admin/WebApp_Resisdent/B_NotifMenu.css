@@ -22,7 +22,7 @@ body, html {
 
 .S-title {
     font-size: 24px;
-    color: #1D839F;
+    color: #03045e;
     font-weight: bold;
 }
 
@@ -51,7 +51,7 @@ body, html {
     padding: 15px 25px;
     margin-bottom: 10px;
     background: white;
-    color: #1D839F;
+    color: #03045e;
     font-size: 16px;
     text-align: left;
     border: none;
@@ -61,7 +61,7 @@ body, html {
 
 .S-tab-button.active {
     background: #d4d6da;
-    color: #1D839F;
+    color: #03045e;
     font-weight: bold;
     border-radius: 20px;
     margin-left: 30px; /* Moves the active button slightly more to the right */
@@ -74,8 +74,8 @@ body, html {
     box-sizing: border-box;
     background-color: white;
     overflow-y: auto;
-    color: black;
-    border-color: #1D839F;
+    color: #03045e;
+    border-color: #03045e;
 }
 
 /* Content Items */
