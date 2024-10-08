@@ -12,27 +12,23 @@
 <body>
     <div class="background-container"></div>
     <div class="logo">
-        <img src="tempLogo.png" alt="Logo"> <!-- SOLARHYDROSYNC LOGO HERE (Currently using brgy 128 logo)-->
+        <img src="tempLogo.png" alt="Logo"> <!-- SOLARHYDROSYNC LOGO HERE (Currently using brgy 128 logo) -->
     </div>
     <div class="login-container">
-        <div class="logo">
-            <img src="tempLogo.png" alt="Logo">
-        </div>
         <h2>Login</h2>
-        <form method="post">
+        <form id="login-form">
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" id="username" required>
                 <label>Username</label>
             </div>
             <div class="txt_field">
-                <input type="password" required>
+                <input type="password" id="password" required>
                 <label>Password</label>
             </div>
             <button type="submit">Sign In</button>
             <div class="forgot-password">Forgot Password?</div>
         </form>
     </div>
-    
 
     <script src="B_Login_Script.js"></script>
 </body>
