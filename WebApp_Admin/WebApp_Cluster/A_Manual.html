@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Authorization Form</title>
+    <link rel="stylesheet" href="A_Manual.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image Upload Container positioned at the top-right -->
+        <div class="image-upload-container">
+            <div class="image-preview-container">
+                <img id="imagePreview" src="#" alt="Image Preview">
+            </div>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <form class="family-resident-form" id="residentForm">
+            <div class="form-group">
+                <label for="familyName">Family Name</label>
+                <input type="text" id="familyName" placeholder="Enter Family Name">
+            </div>
+
+            <div class="form-group">
+                <label for="familyId">Family ID</label>
+                <input type="text" id="familyId" placeholder="Family ID" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="residentName">Resident Name</label>
+                <input type="text" id="residentName" placeholder="Enter Resident Name">
+            </div>
+
+            <div class="form-group">
+                <label for="residentId">Resident ID</label>
+                <input type="text" id="residentId" placeholder="Resident ID" disabled>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="authorize-button">Authorize</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Custom Modal Structure -->
+    <div class="modal" id="customModal">
+        <div class="modal-content">
+            <div class="modal-header">Cluster: Authorize Resident?</div>
+            <div class="modal-footer">
+                <button class="modal-button btn-yes" id="btnYes">Yes</button>
+                <button class="modal-button btn-no" id="btnNo">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="A_Manual.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 70%;
+    margin: 150px auto;
+    padding: 20px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(19, 143, 220, 0.1);
+    border-radius: 10px;
+    border: 2px solid #1D839F;
+    position: relative; /* Enable positioning for child elements */
+}
+
+/* Image Upload Container Styling */
+.image-upload-container {
+    position: absolute; /* Position it relative to the container */
+    top: -25px; /* Adjust positioning to sit above the container */
+    right: -20px; /* Adjust positioning to the right */
+    width: 150px; /* Circle diameter */
+    height: 150px; /* Circle diameter */
+    border-radius: 50%;
+    border: 2px solid #1D839F;
+    background-color: #f8f8f8;
+    overflow: hidden; /* Clip overflowing elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Preview Styling */
+.image-preview-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Hide the default file input */
+#fileInput {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Form Fields and Placeholder Styling */
+.family-resident-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #ddd; /* Bottom border */
+    transition: border-color 0.3s ease;
+}
+
+/* Reduce width for specific inputs */
+#familyName, #familyId, #residentName, #residentId {
+    width: 30%;
+}
+
+/* Reduce the width of the placeholder text */
+.form-group input::placeholder {
+    color: #999; /* Set a lighter color for better distinction */
+}
+
+/* Input focus styling */
+.form-group input:focus {
+    border-bottom: 2px solid #6eb9d7; /* Change bottom border color on focus */
+    outline: none;
+}
+
+/* Disabled input styling */
+.form-group input:disabled {
+    background-color: #e9e9e9;
+    border-bottom: 2px dashed #ddd;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.authorize-button {
+    padding: 10px 20px;
+    background-color: #6eb9d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.authorize-button:hover {
+    background-color: #1D839F;
+}
+
+/* Add styles for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center; /* Center alignment */
+    align-items: center; /* Center alignment */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #b4afaf;
+    width: 400px; /* Set a specific width */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow effect */
+}
+
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-yes {
+    background-color: #6eb9d7;
+    color: white;
+}
+
+.btn-no {
+    background-color: #1D839F;
+    color: white;
+}
+
+.btn-yes:hover {
+    opacity: 0.8;
+    background-color: #1D839F;
+}
+
+.btn-no:hover{
+    opacity: 0.8;
+    background-color: #6eb9d7;
+}

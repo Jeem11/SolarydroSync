@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.table {
+    background-color: white; /* Table background color */
+    color: white; /* Text color for table cells */
+}
+
+.table tr{
+    background-color: white;
+}
+.table th {
+    background-color: #75975e; /* Header background color */
+    color: white; /* Header text color */
+}
+
+.table td {
+    color: white; /* Body cell text color */
+}
+
+.table th, .table td {
+    border-right: 2px solid #dee2e6; /* Adds right border to each cell */
+}
+
+.table th:last-child, .table td:last-child {
+    border-right: none; /* Removes the right border from the last column */
+}
+
+.text-center {
+    color: #75975e; /* Center text color */
+}
+
+h2 {
+    font-size: 24px;
+    color: #75975e;
+    font-weight: bold;
+}
