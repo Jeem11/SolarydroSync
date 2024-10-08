@@ -84,7 +84,7 @@
                         <input type="text" id="citizenship" placeholder="Enter Citizenship" required>
                     </div>
                     <div class="form-group">
-                        <label>Occupation</label>
+                        <label>Group</label>
                         <div>
                             <input type="checkbox" id="employed" name="occupation" value="employed">
                             <label for="employed">Employed</label>
@@ -122,7 +122,8 @@
             </div>
             <div class="button-container">
                 <button type="button" class="button-small add-button" id="addResident">Add</button>
-                <button type="button" class="button-small submit-button" id="submitButton">Submit</button>
+                <button type="button" class="button-small remove-button" id="removeResident">Less</button>
+                <button type="button" class="button-small submit-button" id="submitButton">Save</button>
             </div>
         </form>
     </div>
@@ -140,46 +141,47 @@
 
     <script>
         const addResidentButton = document.getElementById('addResident');
+        const removeResidentButton = document.getElementById('removeResident');
         const additionalInfoSection = document.getElementById('additional-info-section');
 
+        // Event listener to add a new resident section
         addResidentButton.addEventListener('click', () => {
-            // Create a new additional info container
             const newContainer = document.createElement('div');
             newContainer.classList.add('additional-info-container');
             newContainer.innerHTML = `
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="lastName">Last Name</label>
+                        <label>Last Name</label>
                         <input type="text" placeholder="Enter Last Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="firstName">First Name</label>
+                        <label>First Name</label>
                         <input type="text" placeholder="Enter First Name" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="middleName">Middle Name (Optional)</label>
+                        <label>Middle Name (Optional)</label>
                         <input type="text" placeholder="Enter Middle Name">
                     </div>
                     <div class="form-group">
-                        <label for="extension">Extension (Optional)</label>
+                        <label>Extension (Optional)</label>
                         <input type="text" placeholder="Enter Extension">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="placeOfBirth">Place of Birth</label>
+                        <label>Place of Birth</label>
                         <input type="text" placeholder="Enter Place of Birth" required>
                     </div>
                     <div class="form-group">
-                        <label for="birthday">Birthday</label>
+                        <label>Birthday</label>
                         <input type="date" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="sex">Sex</label>
+                        <label>Sex</label>
                         <select required>
                             <option value="" disabled selected>Select Sex</option>
                             <option value="male">Male</option>
@@ -187,7 +189,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="status">Status</label>
+                        <label>Status</label>
                         <select required>
                             <option value="" disabled selected>Select Status</option>
                             <option value="single">Single</option>
@@ -196,7 +198,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="citizenship">Citizenship</label>
+                    <label>Citizenship</label>
                     <input type="text" placeholder="Enter Citizenship" required>
                 </div>
                 <div class="form-group">
@@ -217,54 +219,19 @@
                         <input type="checkbox" name="occupation" value="ofw">
                         <label>OFW</label>
                     </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="soloParent">
-                        <label>Solo Parent</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="outOfSchoolChildren">
-                        <label>Out of School (Children)</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="outOfSchoolYouth">
-                        <label>Out of School (Youth)</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="indigenousPeople">
-                        <label>Indigenous People</label>
-                    </div>
                 </div>
             `;
+
             additionalInfoSection.appendChild(newContainer);
         });
 
-        // Modal functionality
-        const submitButton = document.getElementById('submitButton');
-        const customModal = document.getElementById('customModal');
-        const btnYes = document.getElementById('btnYes');
-        const btnNo = document.getElementById('btnNo');
-
-        submitButton.addEventListener('click', () => {
-            customModal.style.display = 'flex'; // Show the modal
-        });
-
-        btnYes.addEventListener('click', () => {
-            alert('Form Submitted Successfully!');
-            customModal.style.display = 'none'; // Hide the modal
-            // Here you can add logic to submit the form or process it
-            // For example, document.getElementById('residentForm').submit();
-        });
-
-        btnNo.addEventListener('click', () => {
-            customModal.style.display = 'none'; // Hide the modal
-        });
-
-        // Close the modal when clicking outside of the modal content
-        window.onclick = function(event) {
-            if (event.target === customModal) {
-                customModal.style.display = 'none';
+        // Event listener to remove the last added resident section
+        removeResidentButton.addEventListener('click', () => {
+            const allContainers = additionalInfoSection.getElementsByClassName('additional-info-container');
+            if (allContainers.length > 1) {  // Prevent removing the initial container
+                additionalInfoSection.removeChild(allContainers[allContainers.length - 1]);
             }
-        }
+        });
     </script>
 </body>
 </html>

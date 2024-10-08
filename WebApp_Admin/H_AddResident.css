@@ -70,7 +70,8 @@ input[type="tel"] {
 
 /* Adjusted styles for buttons */
 .add-button, 
-.submit-button {
+.submit-button,
+.remove-button {
     padding: 5px 10px; /* Smaller padding for consistent size */
     background-color: #6eb9d7; /* Blue color for Add button */
     color: #075166;
@@ -88,6 +89,16 @@ input[type="tel"] {
 .add-button:hover {
     background-color: #1D839F; /* Darker blue on hover */
     color: white;
+}
+
+.remove-button {
+    background-color: #960018; /* Green color for Submit button */
+    color: white;
+}
+
+.remove-button:hover {
+    background-color: #b22222; /* Darker green on hover */
+    color: black;
 }
 
 .submit-button {
