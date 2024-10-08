@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    max-width: 100%; /* Increased width for better spacing */
+    max-width: 100%;
     margin: 100px auto;
     background: #fff;
     padding: 20px;
@@ -45,131 +45,133 @@ select {
 
 .email-contact-group {
     display: flex;
-    justify-content: space-between; /* Space between email and contact */
-    align-items: flex-start; /* Align labels at the top */
-    gap: 20px; /* Add gap between email and contact containers */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .email-container,
 .contact-container {
-    flex: 1; /* Allow containers to take equal space */
+    flex: 1;
 }
 
 #familyName {
     width: 30%;
 }
 
-#familyEmail,
+#familyEmail {
+    width: 61.5%;
+}
+
 #familyContact {
-    width: 61.5%; 
+    width: 40%;
 }
 
 input[type="tel"] {
-    margin-top: 5px; /* Space above the input field */
+    margin-top: 5px;
 }
 
-/* Adjusted styles for buttons */
-.add-button, 
+/* Styles for Add, Submit, and Remove buttons */
+.add-button,
 .submit-button,
 .remove-button {
-    padding: 5px 10px; /* Smaller padding for consistent size */
-    background-color: #6eb9d7; /* Blue color for Add button */
+    padding: 5px 10px;
+    background-color: #6eb9d7;
     color: #075166;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px; /* Smaller font size */
-    width: 80px; /* Set a fixed width */
-    height: 40px; /* Set a fixed height */
-    display: flex; /* Flex for centering text */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
+    font-size: 14px;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.add-button:hover {
-    background-color: #1D839F; /* Darker blue on hover */
+.add-button:hover,
+.submit-button:hover,
+.remove-button:hover {
+    background-color: #1D839F;
     color: white;
 }
 
 .remove-button {
-    background-color: #960018; /* Green color for Submit button */
-    color: white;
+    background-color: #960018;
 }
 
 .remove-button:hover {
-    background-color: #b22222; /* Darker green on hover */
-    color: black;
+    background-color: #b22222;
 }
 
 .submit-button {
-    background-color: #1D839F; /* Green color for Submit button */
-    color: white;
+    background-color: #1D839F;
 }
 
 .submit-button:hover {
-    background-color: #6eb9d7; /* Darker green on hover */
+    background-color: #6eb9d7;
     color: #075166;
 }
 
-/* Styles for positioning buttons */
+/* Button Container */
 .button-container {
-    position: absolute; /* Position the button container */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    display: flex; /* Flex for horizontal alignment */
-    gap: 10px; /* Space between buttons */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
 }
 
+/* Back Button */
 .back-button {
-    background-color: #fff; /* Background color for the button */
-    border: none; /* No border */
-    color: #0886b8; /* Text color */
+    background-color: #fff;
+    border: none;
+    color: #0886b8;
     font-size: 30px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the icon and text */
-    width: 40px; /* Set the width */
-    height: 40px; /* Set the height */
-    border-radius: 50%; /* Make the button circular */
-    margin-bottom: 20px; /* Space below the back button */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .back-button i {
-    margin-right: 0; /* Remove margin since the button is circular */
+    margin-right: 0;
 }
 
 .back-button:hover {
-    background-color: #1D839F; /* Change background on hover */
-    color: white; /* Change text color on hover */
+    background-color: #1D839F;
+    color: white;
 }
 
-/* New styles for additional info container */
+/* Additional Info Container */
 .additional-info-container {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f7f7f7; /* Light background for additional info */
+    background-color: #f7f7f7;
 }
 
 .form-row {
     display: flex;
-    justify-content: space-between; /* Space between items in the row */
-    margin-bottom: 15px; /* Space below each row */
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .form-group {
-    flex: 1; /* Each form-group takes equal space */
-    margin-right: 10px; /* Space between columns */
+    flex: 1;
+    margin-right: 10px;
 }
 
 .form-group:last-child {
-    margin-right: 0; /* Remove margin for the last item in the row */
+    margin-right: 0;
 }
 
-/* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -185,6 +187,8 @@ input[type="tel"] {
 
 .modal-content {
     background-color: #fff;
+    margin-top: 300px;
+    margin-left: 525px;
     padding: 30px;
     border: 1px solid #b4afaf;
     width: 400px; /* Set a specific width */
@@ -226,7 +230,148 @@ input[type="tel"] {
     background-color: #1D839F;
 }
 
-.btn-no:hover {
+.btn-no:hover{
     opacity: 0.8;
     background-color: #6eb9d7;
+}
+
+/* Custom styles for positioning resident navigation and location dropdowns */
+.residentnav {
+    position: absolute;
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
+}
+
+.locSearch {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Resident Location Navigation */
+.reslocNav {
+    position: absolute; /* Keep this absolute to position it correctly */
+    top: 70px; /* Adjust position as needed */
+    right: 20px; /* Align with resident navigation */
+}
+
+.loc {
+    display: flex;
+    gap: 10px; /* Space between dropdowns */
+}
+
+/* Building, Floor, Cluster, and Bridge Dropdowns */
+.bldgSearch,
+.floorSearch,
+.clusterSearch,
+.bridgeSearch {
+    width: 100px; /* Set width for each dropdown */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Toggle Button Styles */
+#resToggle {
+    display: none; /* Hide default toggle input */
+}
+
+.rToggleLbl {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resToggle:checked + .rToggleLbl {
+    background-color: #1D839F; /* Active background */
+    color: white; /* Active text color */
+}
+
+/* Table row for additional info */
+.additional-info {
+    display: none; /* Hidden by default */
+}
+
+/* Styles for button animations and visibility toggle */
+.active-state {
+    background-color: #1D839F;
+    color: white;
+}
+
+.roll {
+    transform: rotate(180deg); /* Rotate animation */
+}
+
+.show {
+    display: block; /* Show hidden elements */
+}
+
+.hide {
+    display: none; /* Hide elements */
+}
+
+/* Info Button Styles */
+.info-btn {
+    cursor: pointer;
+    font-size: 20px;
+    color: #075166;
+    transition: transform 0.3s ease;
+}
+
+.info-btn.bx-plus {
+    transform: rotate(0deg);
+}
+
+.info-btn.bx-minus {
+    transform: rotate(45deg);
+}
+
+/* Location Dropdown Styles */
+.location-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.locSearch {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Associated Dropdowns */
+.loc {
+    display: flex;
+    gap: 10px;
+}
+
+.bldgSearch,
+.floorSearch,
+.clusterSearch,
+.bridgeSearch {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button Container */
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
 }

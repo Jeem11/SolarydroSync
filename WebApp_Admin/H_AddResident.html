@@ -120,118 +120,59 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Button container -->
             <div class="button-container">
                 <button type="button" class="button-small add-button" id="addResident">Add</button>
                 <button type="button" class="button-small remove-button" id="removeResident">Less</button>
                 <button type="button" class="button-small submit-button" id="submitButton">Save</button>
             </div>
         </form>
-    </div>
 
+        <div class="residentnav">
+            <select class="locSearch" id="locationSelect" name="locationType">
+                <option value="" disabled selected hidden>Location</option>
+                <option value="bldg">Building</option>
+                <option value="bldg_ext">Building Extension</option>
+                <option value="mlla">Maralla</option>
+                <option value="mllabrg">Maralla Bridge</option>
+                <option value="up_mt">Upper Smokey Mountain</option>
+            </select>
+        </div>
+
+        <div class="reslocNav">
+            <div class="loc">
+                <select class="bldgSearch" id="bldgSelect" name="bldgNo" style="display: none;">
+                    <option value="" disabled selected hidden>Bldg No.</option>
+                    <!--Javascript options: F_ResidentCon_Script.js-->
+                </select>
+                <select class="floorSearch" id="floorSelect" name="flrNo" style="display: none;">
+                    <option value="" disabled selected hidden>Floor No.</option>
+                    <!--Javascript options: F_ResidentCon_Script.js-->
+                </select>
+                <select class="clusterSearch" id="clusterSelect" name="clrNo" style="display: none;">
+                    <option value="" disabled selected hidden>Cluster No.</option>
+                    <!--Javascript options: F_ResidentCon_Script.js-->
+                </select>
+                <select class="bridgeSearch" id="bridgeSelect" name="brgNo" style="display: none;">
+                    <option value="" disabled selected hidden>Bridge No.</option>
+                    <!--Javascript options: F_ResidentCon_Script.js-->
+                </select>
+            </div>
+        </div>
+        
     <!-- Custom Modal Structure -->
     <div class="modal" id="customModal">
         <div class="modal-content">
-            <div class="modal-header">Save New Resident Record?</div>
+            <div class="modal-header">Admin: Save New Resident Record?</div>
             <div class="modal-footer">
                 <button class="modal-button btn-yes" id="btnYes">Yes</button>
                 <button class="modal-button btn-no" id="btnNo">No</button>
             </div>
         </div>
+    </div>    
+
+        <script src="H_AddResident.js"></script>
     </div>
-
-    <script>
-        const addResidentButton = document.getElementById('addResident');
-        const removeResidentButton = document.getElementById('removeResident');
-        const additionalInfoSection = document.getElementById('additional-info-section');
-
-        // Event listener to add a new resident section
-        addResidentButton.addEventListener('click', () => {
-            const newContainer = document.createElement('div');
-            newContainer.classList.add('additional-info-container');
-            newContainer.innerHTML = `
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Enter Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" placeholder="Enter First Name" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Middle Name (Optional)</label>
-                        <input type="text" placeholder="Enter Middle Name">
-                    </div>
-                    <div class="form-group">
-                        <label>Extension (Optional)</label>
-                        <input type="text" placeholder="Enter Extension">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Place of Birth</label>
-                        <input type="text" placeholder="Enter Place of Birth" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Birthday</label>
-                        <input type="date" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Sex</label>
-                        <select required>
-                            <option value="" disabled selected>Select Sex</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select required>
-                            <option value="" disabled selected>Select Status</option>
-                            <option value="single">Single</option>
-                            <option value="married">Married</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Citizenship</label>
-                    <input type="text" placeholder="Enter Citizenship" required>
-                </div>
-                <div class="form-group">
-                    <label>Occupation</label>
-                    <div>
-                        <input type="checkbox" name="occupation" value="employed">
-                        <label>Employed</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="unemployed">
-                        <label>Unemployed</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="pwd">
-                        <label>PWD</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="occupation" value="ofw">
-                        <label>OFW</label>
-                    </div>
-                </div>
-            `;
-
-            additionalInfoSection.appendChild(newContainer);
-        });
-
-        // Event listener to remove the last added resident section
-        removeResidentButton.addEventListener('click', () => {
-            const allContainers = additionalInfoSection.getElementsByClassName('additional-info-container');
-            if (allContainers.length > 1) {  // Prevent removing the initial container
-                additionalInfoSection.removeChild(allContainers[allContainers.length - 1]);
-            }
-        });
-    </script>
 </body>
 </html>
