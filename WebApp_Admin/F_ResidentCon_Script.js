@@ -9,6 +9,18 @@ function updateLabel() {
     }
 }
 
+document.querySelectorAll('.info-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const additionalInfoRow = this.closest('tr').nextElementSibling;
+        if (additionalInfoRow.classList.contains('additional-info')) {
+            additionalInfoRow.style.display = additionalInfoRow.style.display === 'none' || additionalInfoRow.style.display === '' ? 'table-row' : 'none';
+            this.classList.toggle('bx-plus');
+            this.classList.toggle('bx-minus');
+        }
+    });
+});
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
