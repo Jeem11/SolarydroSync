@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Button-controlled content change">
+    <title>Admin Staff Board</title>
+    <link rel="stylesheet" href="B_NotifMenu.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <div class="S-title-container">
+        <h1 class="S-title">Notification Board</h1>
+    </div>
+
+    <!-- Sidebar and Content Wrapper -->
+    <div class="S-main-container">
+        <!-- Sidebar -->
+        <div class="S-sidebar">
+            <button class="S-tab-button active" data-target="S-content1">Cancellation</button>
+            <button class="S-tab-button" data-target="S-content2">Schedule</button>
+            <button class="S-tab-button" data-target="S-content3">Update</button>
+            <button class="S-tab-button" data-target="S-content4">Advisory</button>
+            <button class="S-tab-button" data-target="S-content5">Semi-Annual Update</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="S-content">
+            <div id="S-content1" class="S-content-item active">
+                <h2>Cancellation Content</h2>
+                <p>This is the content for Cancellations.</p>
+            </div>
+            <div id="S-content2" class="S-content-item">
+                <h2>Schedule Content</h2>
+                <p>This is the content for Schedules.</p>
+            </div>
+            <div id="S-content3" class="S-content-item">
+                <h2>Update Content</h2>
+                <p>This is the content for Updates.</p>
+            </div>
+            <div id="S-content4" class="S-content-item">
+                <h2>Advisory Content</h2>
+                <p>This is the content for Advisories.</p>
+            </div>
+            <div id="S-content5" class="S-content-item">
+                <h2>Semi-Annual Profile Update Content</h2>
+                <p>This is the content for Profile Updates.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="B_NotifMenu.js"></script>
+</body>
+</html>
