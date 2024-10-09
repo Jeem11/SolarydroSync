@@ -236,13 +236,13 @@ input[type="tel"] {
 }
 
 /* Custom styles for positioning resident navigation and location dropdowns */
-.residentnav {
+.A_residentnav {
     position: absolute;
     top: 20px; /* Position from the top */
     right: 20px; /* Position from the right */
 }
 
-.locSearch {
+.A_locSearch {
     width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -251,22 +251,22 @@ input[type="tel"] {
 }
 
 /* Resident Location Navigation */
-.reslocNav {
+.A_reslocNav {
     position: absolute; /* Keep this absolute to position it correctly */
     top: 70px; /* Adjust position as needed */
     right: 20px; /* Align with resident navigation */
 }
 
-.loc {
+.A_loc {
     display: flex;
     gap: 10px; /* Space between dropdowns */
 }
 
 /* Building, Floor, Cluster, and Bridge Dropdowns */
-.bldgSearch,
-.floorSearch,
-.clusterSearch,
-.bridgeSearch {
+.A_bldgSearch,
+.A_floorSearch,
+.A_clusterSearch,
+.A_bridgeSearch {
     width: 100px; /* Set width for each dropdown */
     padding: 10px;
     border: 1px solid #ccc;
@@ -275,11 +275,11 @@ input[type="tel"] {
 }
 
 /* Toggle Button Styles */
-#resToggle {
+#A_resToggle {
     display: none; /* Hide default toggle input */
 }
 
-.rToggleLbl {
+.A_rToggleLbl {
     display: inline-block;
     padding: 8px 16px;
     border: 1px solid #ccc;
@@ -288,52 +288,52 @@ input[type="tel"] {
     transition: background-color 0.3s ease;
 }
 
-#resToggle:checked + .rToggleLbl {
+#A_resToggle:checked + .A_rToggleLbl {
     background-color: #1D839F; /* Active background */
     color: white; /* Active text color */
 }
 
 /* Table row for additional info */
-.additional-info {
+.A_additional-info {
     display: none; /* Hidden by default */
 }
 
 /* Styles for button animations and visibility toggle */
-.active-state {
+.A_active-state {
     background-color: #1D839F;
     color: white;
 }
 
-.roll {
+.A_roll {
     transform: rotate(180deg); /* Rotate animation */
 }
 
-.show {
+.A_show {
     display: block; /* Show hidden elements */
 }
 
-.hide {
+.A_hide {
     display: none; /* Hide elements */
 }
 
 /* Info Button Styles */
-.info-btn {
+.A_info-btn {
     cursor: pointer;
     font-size: 20px;
     color: #075166;
     transition: transform 0.3s ease;
 }
 
-.info-btn.bx-plus {
+.A_info-btn.bx-plus {
     transform: rotate(0deg);
 }
 
-.info-btn.bx-minus {
+.A_info-btn.bx-minus {
     transform: rotate(45deg);
 }
 
 /* Location Dropdown Styles */
-.location-container {
+.A_location-container {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -342,7 +342,7 @@ input[type="tel"] {
     gap: 10px;
 }
 
-.locSearch {
+.A_locSearch {
     width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -351,15 +351,15 @@ input[type="tel"] {
 }
 
 /* Associated Dropdowns */
-.loc {
+.A_loc {
     display: flex;
     gap: 10px;
 }
 
-.bldgSearch,
-.floorSearch,
-.clusterSearch,
-.bridgeSearch {
+.A_bldgSearch,
+.A_floorSearch,
+.A_clusterSearch,
+.A_bridgeSearch {
     width: 100px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -368,7 +368,7 @@ input[type="tel"] {
 }
 
 /* Button Container */
-.button-container {
+.A_button-container {
     position: absolute;
     bottom: 20px;
     right: 20px;

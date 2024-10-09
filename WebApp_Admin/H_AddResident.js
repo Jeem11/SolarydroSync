@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const locSelect = document.getElementById("locationSelect");
-    const S_bldg = document.getElementById('bldgSelect');
-    const S_flr = document.getElementById('floorSelect');
-    const S_Clst = document.getElementById('clusterSelect');
-    const S_brg = document.getElementById('bridgeSelect');
+    const locSelect = document.getElementById("A_locationSelect");
+    const S_bldg = document.getElementById('A_bldgSelect');
+    const S_flr = document.getElementById('A_floorSelect');
+    const S_Clst = document.getElementById('A_clusterSelect');
+    const S_brg = document.getElementById('A_bridgeSelect');
 
     // Populate Building dropdown
-    const bldgselect = document.getElementById("bldgSelect");
+    const bldgselect = document.getElementById("A_bldgSelect");
     for (let i = 1; i <= 30; i++) {
         const option = document.createElement("option");
         option.value = i;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Populate Floor dropdown
-    const floorselect = document.getElementById("floorSelect");
+    const floorselect = document.getElementById("A_floorSelect");
     for (let i = 1; i <= 5; i++) {
         const option = document.createElement("option");
         option.value = i;
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Populate Cluster dropdown
-    const clusterSelect = document.getElementById("clusterSelect");
+    const clusterSelect = document.getElementById("A_clusterSelect");
     for (let i = 1; i <= 7; i++) {
         const option = document.createElement("option");
         option.value = i;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Populate Bridge dropdown
-    const bridgeSelect = document.getElementById("bridgeSelect");
+    const bridgeSelect = document.getElementById("A_bridgeSelect");
     for (let i = 1; i <= 2; i++) {
         const option = document.createElement("option");
         option.value = i;
