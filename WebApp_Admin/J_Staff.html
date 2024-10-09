@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add Resident Form">
+    <title>Add Staff Form</title>
+    <!-- Boxicons CSS for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS for styling -->
+    <link rel="stylesheet" href="J_Staff.css">
+</head>
+<body>
+    <div class="J_container">
+        <!-- Header for the Add New Staff -->
+        <h1>Add New Staff</h1>
+        
+        <!-- Back Button -->
+        <a href="#" class="J_back-button">
+            <i class='bx bx-arrow-back'></i> 
+        </a>
+        
+        <!-- Dropdown for Staff Position -->
+        <div class="J_dropdown">
+            <select id="J_staff-position" name="J_staff-position">
+                <option value="" disabled selected>Staff Position</option>
+                <option value="head-admin">Head Admin</option>
+                <option value="admin">Admin</option>
+                <option value="operator">Operator</option>
+                <option value="cluster-leader">Cluster Leader</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="J_new-container">
+        <form class="J_family-resident-form" id="J_residentForm">
+            <div class="J_form-group">
+                <input type="text" id="J_lastName" placeholder="Enter last Name">
+            </div>
+
+            <div class="J_form-group">
+                <input type="text" id="J_firstName" placeholder="Enter First Name">
+            </div>
+
+            <div class="J_form-group">
+                <input type="text" id="J_middleName" placeholder="Enter Middle Name">
+            </div>
+
+            <div class="J_form-group">
+                <input type="text" id="J_extension" placeholder="Enter Extension Name">
+                <button type="button" class="J_search-button">Search</button> <!-- New Search Button -->
+            </div>
+
+            <div class="J_form-group">
+                <input type="text" id="J_address" placeholder="Address" readonly>
+            </div>
+            <div class="J_form-group">
+                <input type="email" id="J_email" placeholder="Email">
+            </div>
+            <div class="J_form-group">
+                <input type="tel" id="J_contactNo" placeholder="Contact No.">
+            </div>
+            <div class="J_form-group">
+                <input type="tel" id="J_emergencyContactNo" placeholder="Emergency Contact No.">
+            </div>    
+
+            <div class="J_button-group">
+                <button type="submit" class="J_save-button">Save</button>
+            </div>
+        </form>
+
+        <!-- Image Upload Container positioned at the top-right -->
+        <div class="J_image-upload-container">
+            <div class="J_image-preview-container">
+                <img id="J_imagePreview" src="#" alt="Image Preview">
+            </div>
+            <input type="file" id="J_fileInput" accept="image/*">
+        </div>
+    </div>
+
+    <!-- Modal Structure for Search Results -->
+    <div id="J_modal" class="J_modal">
+        <div class="J_modal-content">
+            <span class="J_close-button">&times;</span> <!-- Close button -->
+            <div class="J_modal-header">
+                <h2>Search Results</h2>
+            </div>
+            <div class="J_modal-body">
+                <div class="J_column">
+                    <h3>NAME</h3>
+                    <ul>
+                        <li>Sophia Marie Cuvin</li>
+                        <li>Jhon Mark Mabandos</li>
+                        <li>Chesca Joy Fallorina</li>
+                        <li>Jadd Rainer Aaron Tigas</li>
+                    </ul>
+                </div>
+                <div class="J_column">
+                    <h3>ADDRESS</h3>
+                    <ul>
+                        <li>Quezon City</li>
+                        <li>Valley Golf Cainta</li>
+                        <li>Cogeo Antipolo City</li>
+                        <li>Quezon City</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure for Save New Staff Confirmation -->
+    <div class="J_modal" id="J_saveModal">
+        <div class="J_modal-content">
+            <div class="J_modal-header">
+                <h2>Save New Staff?</h2>
+            </div>
+            <div class="J_modal-body">
+                <p>Are you sure you want to save this new staff member?</p>
+            </div>
+            <div class="J_button-group">
+                <button id="J_confirm">Yes</button>
+                <button id="J_cancel">No</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="J_Staff.js"></script>
+</body>
+</html>

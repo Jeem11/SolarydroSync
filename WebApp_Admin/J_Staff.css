@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Main Container styling */
+.J_container {
+    max-width: 90%; /* Set width to 90% */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* New Container for the form and image upload */
+.J_new-container {
+    max-width: 90%; /* Set width to 90% */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Enable positioning for child elements */
+}
+
+.J_container h1{
+        font-size: 24px;
+        color: #1D839F;
+        font-weight: bold;
+}
+
+/* Image Upload Container Styling */
+.J_image-upload-container {
+    position: absolute; /* Position it relative to the container */
+    top: -25px; /* Adjust positioning to sit above the container */
+    right: -20px; /* Adjust positioning to the right */
+    width: 150px; /* Circle diameter */
+    height: 150px; /* Circle diameter */
+    border-radius: 50%;
+    border: 2px solid #1D839F;
+    background-color: #f8f8f8;
+    overflow: hidden; /* Clip overflowing elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Preview Styling */
+.J_image-preview-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.J_image-preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Hide the default file input */
+#J_fileInput {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Back button styling with hover effect */
+.J_back-button {
+    display: inline-flex; /* Change to inline-flex for tighter fit */
+    align-items: center;
+    justify-content: center; /* Center the icon and text */
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px; /* Adds space between back button and dropdown */
+    padding: 8px; /* Reduced padding for smaller size */
+    border-radius: 50%; /* Makes the border circular */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.J_back-button:hover {
+    background-color: #1D839F;
+    color: white;
+    width: 40px; /* Set width for hover effect */
+    height: 40px; /* Set height for hover effect */
+    display: flex; /* Keep it as flex to maintain alignment */
+    justify-content: center; /* Center icon inside */
+    align-items: center; /* Center icon inside */
+}
+
+/* Icon styling for better visibility */
+.J_back-button i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+/* Dropdown styling */
+.J_dropdown {
+    margin-top: 10px; /* Adds space below the back button */
+}
+
+.J_dropdown select {
+    width: 100%; /* Full width of the container */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Placeholder styling for "Staff Position" */
+.J_dropdown select option {
+    color: #333;
+}
+
+.J_dropdown select option[disabled] {
+    color: #999; /* Style for disabled placeholder */
+}
+
+/* Form Fields and Placeholder Styling */
+.J_family-resident-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.J_form-group {
+    margin-bottom: 15px;
+}
+
+.J_form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.J_form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #ddd; /* Bottom border */
+    transition: border-color 0.3s ease;
+}
+
+/* Reduce width for specific inputs */
+#J_lastName, 
+#J_firstName, 
+#J_middleName, 
+#J_extension, 
+#J_address,
+#J_email,
+#J_contactNo,
+#J_emergencyContactNo {
+    width: 30%;
+}
+
+.J_column li{
+    cursor: pointer;
+}
+.J_column li:hover{
+    color: #1D839F;
+}
+#J_staff-position{
+    width: 20%;
+}
+
+/* Reduce the width of the placeholder text */
+.J_form-group input::placeholder {
+    color: #999; /* Set a lighter color for better distinction */
+}
+
+/* Input focus styling */
+.J_form-group input:focus {
+    border-bottom: 2px solid #6eb9d7; /* Change bottom border color on focus */
+    outline: none;
+}
+
+/* Disabled input styling */
+.J_form-group input:disabled {
+    background-color: #e9e9e9;
+    border-bottom: 2px dashed #ddd;
+}
+
+.J_button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.J_save-button {
+    padding: 10px 20px;
+    background-color: #6eb9d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.J_save-button:hover {
+    background-color: #1D839F;
+}
+
+.J_search-button {
+    padding: 8px 12px; /* Slightly smaller padding */
+    background-color: #6eb9d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Space between input and button */
+    height: 40px; /* Set a consistent height */
+}
+
+.J_search-button:hover {
+    background-color: #1D839F;
+}
+
+.J_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.J_modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.J_close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.J_close-button:hover,
+.J_close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.J_modal-header {
+    margin-bottom: 15px;
+}
+
+.J_modal-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.J_column {
+    width: 48%; /* Two columns side by side */
+}
+
+.J_column h3 {
+    margin-bottom: 10px;
+}
+
+/* New styles for Save New Staff confirmation modal */
+#J_saveModal .J_modal-header {
+    text-align: center; /* Center header text */
+}
+
+#J_saveModal .J_modal-content {
+    width: 40%; /* Adjusted width for the modal content */
+    max-width: 600px; /* Optional: maximum width */
+    height: auto; /* Auto height to fit content */
+}
+
+#J_saveModal .J_button-group {
+    display: flex;
+    justify-content: center; /* Center buttons in the modal */
+    margin-top: 20px; /* Add spacing above buttons */
+}
+
+#J_saveModal button {
+    padding: 10px 15px;
+    background-color: #6eb9d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Space between buttons */
+}
+
+#J_saveModal button:hover {
+    background-color: #1D839F; /* Darker shade on hover */
+}
+
+.J_modal-body p {
+    margin-left: 50px; /* Remove default margin */
+    text-align: center; /* Center text if necessary */
+}
