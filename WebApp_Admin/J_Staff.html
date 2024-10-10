@@ -54,6 +54,16 @@
             <div class="J_form-group">
                 <input type="text" id="J_address" placeholder="Address" readonly>
             </div>
+            
+            <!-- New Placeholders for Age and Birthday (Readonly) -->
+            <div class="J_form-group">
+                <input type="number" id="J_age" placeholder="Age" readonly>
+            </div>
+            
+            <div class="J_form-group">
+                <input type="text" id="J_birthday" placeholder="Birthday" readonly>
+            </div>
+
             <div class="J_form-group">
                 <input type="email" id="J_email" placeholder="Email">
             </div>
@@ -78,35 +88,53 @@
         </div>
     </div>
 
-    <!-- Modal Structure for Search Results -->
-    <div id="J_modal" class="J_modal">
-        <div class="J_modal-content">
-            <span class="J_close-button">&times;</span> <!-- Close button -->
-            <div class="J_modal-header">
-                <h2>Search Results</h2>
-            </div>
-            <div class="J_modal-body">
-                <div class="J_column">
-                    <h3>NAME</h3>
-                    <ul>
-                        <li>Sophia Marie Cuvin</li>
-                        <li>Jhon Mark Mabandos</li>
-                        <li>Chesca Joy Fallorina</li>
-                        <li>Jadd Rainer Aaron Tigas</li>
-                    </ul>
-                </div>
-                <div class="J_column">
-                    <h3>ADDRESS</h3>
-                    <ul>
-                        <li>Quezon City</li>
-                        <li>Valley Golf Cainta</li>
-                        <li>Cogeo Antipolo City</li>
-                        <li>Quezon City</li>
-                    </ul>
-                </div>
-            </div>
+<!-- Modal Structure for Search Results -->
+<div id="J_modal" class="J_modal">
+    <div class="J_modal-content">
+        <span class="J_close-button">&times;</span> <!-- Close button -->
+        <div class="J_modal-header">
+            <h2>Search Results</h2>
+        </div>
+        <div class="J_modal-body">
+            <table class="J_table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>AGE</th>
+                        <th>BIRTHDAY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-name="Sophia Marie Cuvin" data-address="Quezon City" data-age="00" data-birthday="0000-00-00">
+                        <td>Sophia Marie Cuvin</td>
+                        <td>Quezon City</td>
+                        <td>00</td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    <tr data-name="Jhon Mark Mabandos" data-address="Valley Golf Cainta" data-age="00" data-birthday="0000-00-00">
+                        <td>Jhon Mark Mabandos</td>
+                        <td>Valley Golf Cainta</td>
+                        <td>00</td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    <tr data-name="Chesca Joy Fallorina" data-address="Cogeo Antipolo City" data-age="00" data-birthday="0000-00-00">
+                        <td>Chesca Joy Fallorina</td>
+                        <td>Cogeo Antipolo City</td>
+                        <td>00</td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    <tr data-name="Jadd Rainer Aaron Tigas" data-address="Quezon City" data-age="00" data-birthday="0000-00-00">
+                        <td>Jadd Rainer Aaron Tigas</td>
+                        <td>Quezon City</td>
+                        <td>00</td>
+                        <td>0000-00-00</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
     <!-- Modal Structure for Save New Staff Confirmation -->
     <div class="J_modal" id="J_saveModal">

@@ -8,57 +8,53 @@ document.getElementById('J_fileInput').addEventListener('change', function(event
 });
 
 // Get modal element
-    const modal = document.getElementById("J_modal");
-    
-    // Get the button that opens the modal
-    const searchButton = document.querySelector(".J_search-button");
-    
-    // Get the <span> element that closes the modal
-    const closeButton = document.querySelector(".J_close-button");
+const modal = document.getElementById("J_modal");
 
-    // Get the input fields for autofilling
-    const addressInput = document.getElementById("J_address");
-    const emailInput = document.getElementById("J_email");
-    const contactNoInput = document.getElementById("J_contactNo");
-    const emergencyContactNoInput = document.getElementById("J_emergencyContactNo");
+// Get the button that opens the modal
+const searchButton = document.querySelector(".J_search-button");
 
-    // Get all name and address list items
-    const nameItems = document.querySelectorAll(".J_column:first-child li");
-    const addressItems = document.querySelectorAll(".J_column:last-child li");
+// Get the <span> element that closes the modal
+const closeButton = document.querySelector(".J_close-button");
 
-    // When the user clicks the button, open the modal 
-    searchButton.onclick = function() {
-        modal.style.display = "block";
-    }
+// Get the input fields for autofilling
+const addressInput = document.getElementById("J_address");
+const ageInput = document.getElementById("J_age");
+const birthdayInput = document.getElementById("J_birthday");
+const emailInput = document.getElementById("J_email");
+const contactNoInput = document.getElementById("J_contactNo");
+const emergencyContactNoInput = document.getElementById("J_emergencyContactNo");
 
-    // When the user clicks on <span> (x), close the modal
-    closeButton.onclick = function() {
+// Get all name list items in the modal (assuming there's a specific class or selector to target name rows)
+const nameItems = document.querySelectorAll(".J_table tbody tr");
+
+// When the user clicks the button, open the modal
+searchButton.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeButton.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Autofill when a name is clicked
+nameItems.forEach(item => {
+    item.onclick = function() {
+        // Get associated data attributes from the clicked row
+        const address = item.getAttribute("data-address");
+        const age = item.getAttribute("data-age");
+        const birthday = item.getAttribute("data-birthday");
+
+        // Fill in the input fields with the associated values
+        addressInput.value = address || ""; // Fill address based on name
+        ageInput.value = age || ""; // Fill age based on name
+        birthdayInput.value = birthday || ""; // Fill birthday based on name
+
+        // Hide the modal after autofill
         modal.style.display = "none";
     }
+});
 
-    // Autofill when a name is clicked
-    nameItems.forEach(item => {
-        item.onclick = function() {
-            const address = item.getAttribute("data-address");
-            
-            // Fill in the input fields
-            addressInput.value = address; // Fill address based on name
-
-            modal.style.display = "none"; // Close modal
-        }
-    });
-
-    // Autofill when an address is clicked
-    addressItems.forEach(item => {
-        item.onclick = function() {
-            const name = item.getAttribute("data-name");
-
-            // Fill in the input fields
-            addressInput.value = item.innerText; // Fill in the address
-
-            modal.style.display = "none"; // Close modal
-        }
-    });
 
 // Get modal elements
 const saveModal = document.getElementById('J_saveModal');
