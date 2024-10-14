@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Family Members</title>
+    <link rel="stylesheet" href="E_Verification1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verified Family Members</h1>
+        <div class="family-list" id="familyList"></div>
+        
+        <!-- Reminder message -->
+        <div class="reminder">
+            <p>Reminder: Please keep in mind that only the Verified/Authorized Family Members are the ones who can get water in the scheduled distribution!</p>
+        </div>
+    </div>
+
+    <!-- Modal for editing family member information -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Family Member</h2>
+            <form id="editForm">
+                <label for="name">Name:</label>
+                <input type="text" id="editName" name="name">
+                
+                <label for="residentId">Resident ID:</label>
+                <input type="text" id="editResidentId" name="residentId">
+
+                <label for="status">Status:</label>
+                <select id="editStatus">
+                    <option value="Authenticated">Authenticated</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="E_Verification1.js"></script>
+</body>
+</html>
