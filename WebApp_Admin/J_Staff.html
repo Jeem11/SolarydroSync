@@ -22,7 +22,7 @@
         
         <!-- Dropdown for Staff Position -->
         <div class="J_dropdown">
-            <select id="J_staff-position" name="J_staff-position">
+            <select id="J_staff-position" name="J_staff-position" required>
                 <option value="" disabled selected>Staff Position</option>
                 <option value="head-admin">Head Admin</option>
                 <option value="admin">Admin</option>
@@ -35,11 +35,11 @@
     <div class="J_new-container">
         <form class="J_family-resident-form" id="J_residentForm">
             <div class="J_form-group">
-                <input type="text" id="J_lastName" placeholder="Enter last Name">
+                <input type="text" id="J_lastName" placeholder="Enter last Name" required>
             </div>
 
             <div class="J_form-group">
-                <input type="text" id="J_firstName" placeholder="Enter First Name">
+                <input type="text" id="J_firstName" placeholder="Enter First Name" required>
             </div>
 
             <div class="J_form-group">
@@ -65,13 +65,13 @@
             </div>
 
             <div class="J_form-group">
-                <input type="email" id="J_email" placeholder="Email">
+                <input type="email" id="J_email" placeholder="Email" required>
             </div>
             <div class="J_form-group">
-                <input type="tel" id="J_contactNo" placeholder="Contact No.">
+                <input type="tel" id="J_contactNo" placeholder="Contact No." required>
             </div>
             <div class="J_form-group">
-                <input type="tel" id="J_emergencyContactNo" placeholder="Emergency Contact No.">
+                <input type="tel" id="J_emergencyContactNo" placeholder="Emergency Contact No." required>
             </div>    
 
             <div class="J_button-group">
@@ -84,7 +84,7 @@
             <div class="J_image-preview-container">
                 <img id="J_imagePreview" src="#" alt="Image Preview">
             </div>
-            <input type="file" id="J_fileInput" accept="image/*">
+            <input type="file" id="J_fileInput" accept="image/*" required>
         </div>
     </div>
 
