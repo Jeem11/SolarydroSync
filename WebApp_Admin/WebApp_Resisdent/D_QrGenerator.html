@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="D_QrGenerator.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Left Section: Text and Buttons -->
+            <div class="left-section">
+                <h1>QR CODE ID</h1>
+                <h2 class="family-name">[Family Name]</h2>
+                <input type="text" id="qrText" placeholder="Enter text for QR code">
+                <button id="generateBtn">Generate QR Code</button>
+                <button id="downloadBtn" style="display:none;">Download QR Code</button>
+            </div>
+
+            <!-- Right Section: QR Code -->
+            <div id="qrCode" class="qr-section"></div>
+        </div>
+
+        <!-- Reminder Section (Always at the Bottom) -->
+        <div class="reminder">
+            <p><strong>Reminder:</strong> This tab will be <strong>ONLY</strong> available when there is at least 1 VERIFIED/AUTHORIZED family member.<br>
+            The QR CODE ID will change and need to be downloaded again every semi-annual update that the family is required to do.</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="D_QrGenerator.js"></script>
+</body>
+</html>
