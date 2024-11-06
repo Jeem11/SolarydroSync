@@ -1,0 +1,177 @@
+/*Google Fonts: */
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen layout */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background fade effect */
+.background-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1.5s ease-in-out;
+    z-index: -1;
+}
+@keyframes fadeToWhite {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0.3;
+        background-color: white; /* Fading to white */
+    }
+    50% {
+        opacity: 0.5; /* Peak white */
+    }
+    55% {
+        opacity: 0.3;
+        background-color: white; /* Fading back to visible */
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Login container (the white box) */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    opacity: 0;
+    animation: slideIn 0.5s forwards ease-in-out;
+    animation-delay: 1s;
+}
+
+/* Logo and form styling */
+.logo img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 35px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40 px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 30%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-family: "Agdasima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2691d9;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -20px;
+    font-size: 16px;
+    color: #2691d9;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+form .txt_field input:focus,
+form .txt_field input:valid {
+    border-bottom: 2px solid #2691d9;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover{
+    background-color: #2691d9;
+    transition: .3s;
+}
+
+.forgot-password{
+    margin-top: 10px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.forgot-password:hover{
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Animation for sliding in the login container */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.fade {
+    opacity: 0.5;
+    transition: opacity 2s ease-in-out;
+}
+
+.background-container {
+    opacity: 1;
+}

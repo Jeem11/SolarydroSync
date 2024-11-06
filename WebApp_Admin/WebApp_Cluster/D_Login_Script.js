@@ -61,4 +61,3 @@ document.getElementById('login-form').addEventListener('submit', async function(
         alert('An error occurred while logging in.');
     }
 });
-
