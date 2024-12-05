@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="F_RecordsCon_Style.css">
+    <link rel="stylesheet" href="L_StaffBoard.css">
     <link rel="stylesheet" href="C_Navigation_Style.css">
-    <link rel="stylesheet" href="L_UpdateResident.css">
-
 
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
-    <title>Update Resident</title>
+    <title>Staff Board</title>
 </head>
 <body class="records-page">
     <!-- Sidebar -->
@@ -147,78 +145,98 @@
     <div class='board'></div>
 
     <!-- JavaScript -->
-    <script src="C_Navigation_Script.js"></script>
+    <script src="L_StaffBoard.js"></script>
 
-    
-
-    <!-- Record Container -->
-    <div class="rec-navigation" id="record-container">
-        <div class="upper-left-container">
-            <div class="back-button-container" id="back-button">
-                <i class='bx bx-left-arrow-alt back-button'></i>
+    <!-- Main Content -->
+    <div class="mainrecontainer">
+        <div class="rec-navigation">
+            <div class="recordcrl">
+                <i class='bx bx-left-arrow-alt'></i>
             </div>
 
-            <!-- Search Container -->
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search">
-                <i class='bx bx-search search-icon'></i>
-            </div>
-        </div>
+            <!-- Residents Section -->
+            <div class="resident-container">
+                <div class="residentnav">
+                    <input type="checkbox" class="restoggle" id="resToggle" onchange="updateLabel()">
+                    <label class="rToggleLbl" for="resToggle">Current</label>
+                </div>
 
-        <!-- Table Container -->
-        <div class="table-container">
-            <table class="family-table" id="family-table">
-                <thead>
-                    <tr>
-                        <th>Family-ID</th>
-                        <th>Family Name</th>
-                        <th>Address</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr onclick="showDetails(1, 'Smith', '123 Elm Street', 2, 'Johnson', '456 Oak Avenue')">
-                        <td>1</td>
-                        <td>Smith</td>
-                        <td>123 Elm Street</td>
-                    </tr>
-                    <tr onclick="showDetails(2, 'Johnson', '456 Oak Avenue', 3, 'Williams', '789 Pine Road')">
-                        <td>2</td>
-                        <td>Johnson</td>
-                        <td>456 Oak Avenue</td>
-                    </tr>
-                    <tr onclick="showDetails(3, 'Williams', '789 Pine Road', 4, 'Jones', '101 Maple Drive')">
-                        <td>3</td>
-                        <td>Williams</td>
-                        <td>789 Pine Road</td>
-                    </tr>
-                    <tr onclick="showDetails(4, 'Jones', '101 Maple Drive', 5, 'Brown', '202 Cedar Lane')">
-                        <td>4</td>
-                        <td>Jones</td>
-                        <td>101 Maple Drive</td>
-                    </tr>
-                    <tr onclick="showDetails(5, 'Brown', '202 Cedar Lane', 6, 'Davis', '303 Birch Way')">
-                        <td>5</td>
-                        <td>Brown</td>
-                        <td>202 Cedar Lane</td>
-                    </tr>
-                    <tr onclick="showDetails(6, 'Davis', '303 Birch Way', 1, 'Smith', '123 Elm Street')">
-                        <td>6</td>
-                        <td>Davis</td>
-                        <td>303 Birch Way</td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="residentnav">
+                    <select class="locSearch" id="locationSelect" name="locationType">
+                        <option value="" disabled selected hidden>Position</option>
+                        <option value="all">All</option>
+                        <option value="head">Head Admin</option>
+                        <option value="admin">Admin</option>
+                        <option value="cluster">Cluster</option>
+                        <option value="operator">Operator</option>
+                    </select>
+                </div>
+
+                <!-- Table Section -->
+                <div class="resident-table-container">
+                    <table class="resident-table">
+                        <thead>
+                            <tr>
+                                <th>Profile</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <i class='bx bx-user-circle profile-icon'></i>
+                                </td>
+                                <td>John Doe</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <div class="action-menu">
+                                        <i class='bx bx-dots-horizontal-rounded action-icon' onclick="toggleMenu(this)"></i>
+                                        <div class="action-dropdown">
+                                            <a href="#" class="action-item">Edit</a>
+                                            <a href="#" class="action-item">Remove</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class='bx bx-user-circle profile-icon'></i>
+                                </td>
+                                <td>Jane Smith</td>
+                                <td><span class="status inactive">Inactive</span></td>
+                                <td>
+                                    <div class="action-menu">
+                                        <i class='bx bx-dots-horizontal-rounded action-icon' onclick="toggleMenu(this)"></i>
+                                        <div class="action-dropdown">
+                                            <a href="#" class="action-item">Edit</a>
+                                            <a href="#" class="action-item">Remove</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class='bx bx-user-circle profile-icon'></i>
+                                </td>
+                                <td>Emily Davis</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <div class="action-menu">
+                                        <i class='bx bx-dots-horizontal-rounded action-icon' onclick="toggleMenu(this)"></i>
+                                        <div class="action-dropdown">
+                                            <a href="#" class="action-item">Edit</a>
+                                            <a href="#" class="action-item">Remove</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-
-
-<!-- Container for additional details -->
-<div id="details-container"></div> 
-
-<!-- Detail Container (hidden initially) -->
-
-
-    <!-- JavaScript for showDetails and deleteRecord functions -->
-    <script src="L_UpdateResident.js"></script>
 </body>
 </html>
