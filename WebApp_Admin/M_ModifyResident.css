@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 2%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.edit-page {
+    background-color: #F9F9F9;
+    width: 100%;
+    overflow: hidden;
+}
+
+.familyMembers {
+    min-height: 300px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex; 
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+
+.mainContainer {
+    position: static;
+    display: flex;
+    flex-direction: column; 
+    margin-top: 5%;
+    margin-left: 8%;
+    width: 90%;
+    gap: 10px; 
+    height: calc(100vh - 72px);    
+    overflow-y: auto;
+}
+
+.removeHead {
+    height: 7%;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+/* Back Button */
+.editcrl {
+    margin: 0;
+    display: flex;
+    height: 45px;
+    width: 45px;
+    align-items: center;       
+    justify-content: center;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px rgba(34, 27, 27, 0.5);
+}
+
+.editcrl i{
+    color: #abb3b8;
+    font-size: 35px;
+}
+
+.editcrl:hover{
+    border: 3px solid #2691d9;
+    transform: scale(1.2); 
+}
+
+.editcrl:hover i{
+    color: #2691d9;
+}
+.famInfo {
+    height: 200px;
+    width: 100%;
+    padding: 15px;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.familyID {
+   padding: 5px 10px;
+   margin-bottom: 40px;
+}
+
+.familyID p{
+    font-family: "Agdasima", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.familyName {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.familyName p{
+    font-family: "Agdasima", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.familyAddress {
+    margin-bottom: 15px;
+}
+
+#famAdd {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color:#3498db;
+    padding: 5px 10px;
+}
+
+.familyMem_border{
+    width: 100%;
+    padding: 0;
+}
+table {
+    table-layout: auto;
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 100px;
+}
+
+#familyMemInfo {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+#familyMemInfo th{
+    padding: 10px;
+    background-color: #2691d9;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Agdasima", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+} 
+
+#familyMemInfo td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 16px;
+}
+
+#familyMemInfo td.removeRes {
+    width: 5%; 
+    text-align: center; 
+    position: relative; 
+    vertical-align: middle;
+}
