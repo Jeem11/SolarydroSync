@@ -6,38 +6,43 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    background-color: #f9f9f9;
 }
 
 /* Title Container */
 .S-title-container {
-    width: 100%;
-    margin-left: 80px;
-    margin-top: 70px;
+    width: calc(100% - 260px); /* Adjust width to exclude sidebar */
+    margin-left: 100px; /* Offset for sidebar width */
+    margin-top: 50px; /* Push down below the header */
     text-align: left;
     padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px ; /* Optional: separator */
 }
 
+/* Title */
 .S-title {
-    font-size: 24px;
+    font-size: 26px;
     color: #03045e;
     font-weight: bold;
+    margin: 0; /* Remove default margins for better spacing */
 }
+
 
 /* Main Container Layout */
 .S-main-container {
     display: flex;
     width: 100%;
-    height: calc(100vh - 72px); /* Full height minus title height */
+    height: calc(100vh - 72px); /* Full height minus header height */
+    margin-top: 7px; /* Account for the header's height */
+    margin-left: 20px; /* Account for the sidebar's width */
+    box-sizing: border-box;
 }
 
 /* Sidebar */
 .S-sidebar {
     width: 20%; /* 20% width for the sidebar */
     padding: 30px 10px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align buttons to the left */
@@ -50,7 +55,6 @@ body, html {
     width: calc(100% - 50px); /* Adjusted width to account for margin */
     padding: 15px 25px;
     margin-bottom: 10px;
-    background: white;
     color: #03045e;
     font-size: 16px;
     text-align: left;
@@ -60,7 +64,6 @@ body, html {
 }
 
 .S-tab-button.active {
-    background: #d4d6da;
     color: #03045e;
     font-weight: bold;
     border-radius: 20px;
@@ -69,13 +72,12 @@ body, html {
 
 /* Content Area */
 .S-content {
-    width: 80%; /* Take up the remaining space */
+    flex: 1; /* Take up remaining space */
     padding: 30px;
-    box-sizing: border-box;
-    background-color: white;
+
     overflow-y: auto;
-    color: #03045e;
-    border-color: #03045e;
+    box-sizing: border-box;
+    border: 1px; /* Optional: border for better visual separation */
 }
 
 /* Content Items */
